@@ -4,20 +4,16 @@
 地址：https://1622089511.github.io/demo2/src2/index.html    
 说明：基础布局方式,使用spirite，复用了一些通用的js以及html结构,CSS样式，使用jq实现了一些js特效,json数据替换。 
 
-### Fullpagedemo    
+### 必应首页  
+地址: https://1622089511.github.io/demo2/src1/biying.html  
+说明: 使用了阿里的icon和font-awesome,jq特效，并使用了自定义JSON数据设置侧边栏内容以及背景图片。 
+
+### 小米首页    
+地址：https://1622089511.github.io/demo2/src3/xiaomi.html   
+说明: 使用很多复用结构和css,面向对象方式封装选项卡、左右偏移、Tab切换JS控件，提供复用。
+
+### Fullpagedemo     
 地址：https://1622089511.github.io/demo2/src4/index.html  
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### 移动端原生的无缝轮播图   
 地址：https://1622089511.github.io/demo2/src5/carousel.html   
@@ -25,4 +21,7 @@
 
 ### 移动端的Tab页面切换   
 地址：https://1622089511.github.io/demo2/src5/tab.html    
-功能：支持点击移动跳转和滑屏切换
+功能：支持点击移动跳转和滑屏切换  
+
+### src6    
+说明：一些常见特效,样式切换，选项卡，拖拽，弹出层，倒计时，tooltip提示，手风琴，自动锚点，canvas时钟，进场动画等特效
