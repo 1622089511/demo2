@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			html,body,div,ul,li{
+				margin:0;
+				padding:0;
+			}
+			ul{
+				list-style: none;
+			}
+			.clearfix:after,
+			.clearfix:before{
+				clear: both;
+			}
+			.clearfix{
+				content:"";
+				display: table;
+			}
+			
+			.carousel {
+				width:720px;
+				height:400px;
+				overflow: hidden;
+				margin:0 auto;
+				border:1px solid red;
+				position:relative;
+			}
+			/*ul+img*/
+			.carousel .Cmain{
+				/*这里要js设置好*/
+				height:400px;
+				position: absolute;
+				left:0;	
+				transition:all .5s;
+			}
+			.Cmain .item,
+			.link1,
+			.link2,
+			.link3{
+				float: left;
+				width:720px;
+				height:400px;
+				display: block;
+			}
+			.item img{
+				width:100%;
+				height:100%;
+			}
+				
+			/*control*/
+			.cTrigger{
+				position: absolute;
+				width:100%;
+				height:20px;
+				bottom:0;
+				text-align: center;
+			}
+			.cTrigger .trigger{
+				display: inline-block;
+				width:20px;
+				height:20px;
+				border-radius:50%;
+				background: #F6F6F6;
+				margin-left:-3px;
+			}
+			
+			.cTrigger .triactive{
+				background: #00AAEE;
+			}
+			
+			/*left + right*/
+			
+			.prev,.next{
+				position:absolute;
+				width:41px;
+				height:69px;
+				top:175px;
+				text-align: center;
+				line-height: 69px;
+			}
+			.prev{
+				background: #CDCDCD;
+				opacity: .3;
+			}
+			.next{			
+				right:0;
+				background: #CDCDCD;
+				opacity: .3;				
+			}
+			
+			
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="carousel">
+			
+			<ul class="Cmain clearfix">
+				<li class="item">
+					<a class="link1" href="javascript:;">
+						<img src="touchimg/1.jpg"/>
+					</a>
+				</li>
+				<li class="item">
+					<a class="link2" href="javascript:;">
+						<img src="touchimg/2.jpg"/>
+					</a
+				</li>
+				<li class="item">
+					<a class="link3" href="javascript:;">
+						<img src="touchimg/3.jpg"/>
+					</a
+				</li>
+			</ul>
+						
+			<div class="cTrigger">
+				<span class="trigger triactive"></span>
+				<span class="trigger"></span>
+				<span class="trigger"></span>
+			</div>
+						
+			<div class="control">
+				<span class="prev">Prev</span>
+				<span class="next">Next</span>
+			</div>
+	
+		</div>
+		
+	<script type="text/javascript">
+		
+		window.onload=function (){
+		    	//ul
+		    var oMain = document.querySelector('.Cmain'),
+		    	aItem = document.querySelectorAll('.item'),
+		    	//btns
+		    	aTrig = document.querySelectorAll('.trigger'),
+		    	//上下
+		    	oPrev = document.querySelector('.prev'),
+		   		oNext = document.querySelector('.next');
+		    
+		    	//设置ul宽度
+		    	liW = aItem[0].offsetWidth;
+		    	oMain.style.width = aItem[0].offsetWidth * aItem.length + 'px'; 
+		    	
+		    	console.log(liW);
+		 	
+		   	
+		   	console.log(oMain.style.left);
+		    function animate(offset){
+		    	//获取当前的left值+单张图片的宽度
+		        var newLeft = parseInt( getComputedStyle(oMain)['left'] ) + offset;
+		        //设置当前left值       
+		        if(newLeft > 0)
+		        {
+		        	newLeft = -1440;
+		        }else if(newLeft < -1440){
+		        	newLeft = 0;
+		        }
+		         oMain.style.left = newLeft + 'px';
+		    }
+		    
+		    
+		    
+		    
+		    	
+		    oPrev.onclick=function (j){
+		    	animate(liW);
+		    	
+		    }   	    
+		    oNext.onclick=function (){
+		        animate(-liW);
+		    }
+		
+		    var timer = null;
+		    function play(){
+		        timer=setInterval(function (){
+		           oNext.onclick(); 
+		        },1500)
+		        
+		    }
+		    
+		    play();
+		   
+		    
+		    oMain.onmouseover=function (){
+		        clearInterval(timer);
+		    }
+		    oMain.onmouseout=function (){
+		        play();
+		    }
+		    
+		    
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>		
+	</body>
+</html>

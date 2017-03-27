@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{padding:0;
+          margin:0;
+          list-style: none;
+          font-size: 12px;
+          text-decoration: none;
+        }
+        .notice{
+           width: 400px;
+           height: 300px;
+           background: #ccc;
+            margin:0 auto;
+            border:1px solid red;
+            position: relative;
+        }
+        .notice-title{
+           width: 400px;
+           height: 80px;
+           background: greenyellow;
+        }
+        .notice-title li {
+            float: left;
+            line-height: 80px;
+            width: 80px;
+            text-align:center;
+        }
+
+        .select{
+            background:#ccc;
+            border:1px solid red;
+            margin:0 -1px;
+            border-bottom: none;
+            border-top:none;
+            font-weight: bolder;
+        }
+        .notice .item{
+            position: absolute;
+            bottom:0; left: 0;
+            height: 220px;
+            width:100%;
+            display: none;
+        }
+        .notice .item-active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+   <div class="notice">
+       <div class="notice-title" id="title">
+           <ul>
+               <li class="select"><a href="#" >公告</a></li>
+               <li><a href="#">规则</a></li>
+               <li><a href="#">论坛</a></li>
+               <li><a href="#">安全</a></li>
+               <li><a href="#">公益</a></li>
+           </ul>
+       </div>
+       <div class="notice-con" id="content">
+           <div class="item item-active">111</div>
+           <div class="item">222</div>
+           <div class="item">333</div>
+           <div class="item">444</div>
+           <div class="item">555</div>
+       </div>
+   </div>
+   <script>
+       function $(id) {
+           return typeof id === 'string' ? document.getElementById(id) : id;
+       }
+       window.onload=function () {
+
+           var aLi = $('title').getElementsByTagName('li'),
+               aDiv =$('content').getElementsByTagName('div');
+
+           for(var i=0 ; i<aLi.length; i++){
+               aLi[i].index = i;
+               aLi[i].onmouseover=function () {
+                   for(var j=0 ;j<aLi.length;j++){
+                       aLi[j].className='';
+                       aDiv[j].style.display = 'none';
+                   }
+                   this.className='select';
+                   aDiv[this.index].style.display = 'block';
+               }
+           }
+       }
+
+
+   </script>
+</body>
+</html>

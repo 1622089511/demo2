@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+        }
+        img {
+            display: block;
+        }
+        .imgWrap {
+            position: relative;
+            border: 1px solid #000000;
+            width: 682px;
+            height: 514px;
+            overflow: hidden;
+            transition: .3s;
+        }
+        .imgWrap div {
+            position: absolute;
+            left: 0;
+            border: 1px solid #ccc;
+            transition: .3s;
+        }
+        .imgWrap div img {
+            width: 682px;
+            height: 512px;
+        }
+    </style>
+</head>
+<body>
+<div class="imgWrap">
+    <div><img src="img/1.jpg" alt="" /></div>
+    <div><img src="img/2.jpg" alt="" /></div>
+    <div><img src="img/3.jpg" alt="" /></div>
+    <div><img src="img/4.jpg" alt="" /></div>
+    <div><img src="img/5.jpg" alt="" /></div>
+</div>
+<script>
+    (function (doc){
+  
+        var imgWrap = doc.querySelector('.imgWrap'), 					
+            imgList = [].slice.apply(doc.querySelectorAll('.imgWrap>div')); //获得img容器的集合
+
+        var imgWidth = imgList[0].offsetWidth,//获取单张图片宽度
+        	exposeWidth = 180, 				  //设置堆叠宽度 可以任意指定
+            boxWidth = imgWidth + (imgList.length - 1) * exposeWidth; //定义容器总宽度
+  
+        //初始化数据
+        imgWrap.style.width = boxWidth + 'px'; //设置容器总宽度
+      
+        //设置每个图片容器的初始位置
+        function init() {
+            imgList.slice(1).forEach(function (item,i) {
+                item.style.left = imgWidth + exposeWidth * i + 'px';
+            });
+        }
+     	init();
+     	
+        //设置滑动
+        var translate = imgWidth - exposeWidth;
+        for(var i=0, len=imgList.length; i<len; i++) {
+            (function(i) {
+                imgList[i].onmouseover = function (){
+                    init(); //每次移入先进行复位
+                    imgList.slice(0,i+1).forEach(function(item,i) {
+                        //设置位置
+                        item.style.left = parseInt(item.style.left) - translate + 'px';
+                    });
+                }
+            })(i);
+        }
+    })(document)
+</script>
+</body>
+</html>

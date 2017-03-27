@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;padding:0;
+			}
+			img{
+				width:375px;
+				height:150px;
+				vertical-align: top;
+				transition: translateX .5s ease-in;
+			}
+			/*外包裹*/
+			.calwrap{
+				width:100%;
+				height:150px;
+				position:relative;
+				overflow: hidden;		
+			}
+			/*内部ul*/
+			.carousel {			
+				/*width:js设置*/
+				position:absolute;
+				list-style: none;
+				left:0;
+				top:0;
+			}
+			/*li*/		
+			.carousel .item{
+				float:left;
+			}
+			.carousel a{
+				display: block;
+			}
+			/*触发*/
+			.caltrigger{
+				width:100%;
+				height:20px;
+				line-height: 20px;
+				position: absolute;
+				bottom:0;
+				text-align: center;
+			}
+			.caltrigger span{
+				width:10px;
+				height:10px;
+				display: inline-block;
+				background: #eee;
+				border-radius: 50%;
+			}
+			.caltrigger .active{
+				background: #00AAEE;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="calwrap" id="touchwrap">
+			<ul class="carousel" id="calPanel">
+				<li class="item"><a href="javascript:;"><img src="touchimg/1.jpg" alt="1" /></a></li>
+				<li class="item"><a href="javascript:;"><img src="touchimg/2.jpg" alt="2" /></a></li>
+				<li class="item"><a href="javascript:;"><img src="touchimg/3.jpg" alt="3" /></a></li>
+				<li class="item"><a href="javascript:;"><img src="touchimg/4.jpg" alt="4" /></a></li>
+				<li class="item"><a href="javascript:;"><img src="touchimg/5.jpg" alt="5" /></a></li>
+				<li class="item"><a href="javascript:;"><img src="touchimg/6.jpg" alt="6" /></a></li>
+				<li class="item"><a href="javascript:;"><img src="touchimg/7.jpg" alt="7" /></a></li>
+				<li class="item"><a href="javascript:;"><img src="touchimg/8.jpg" alt="8" /></a></li>
+				<li class="item"><a href="javascript:;"><img src="touchimg/9.jpg" alt="9" /></a></li>
+			</ul>
+			<nav class="caltrigger" id="touchtrigger" >
+				<span class="active"></span>
+				<span s></span>
+				<span ></span>
+				<span ></span>
+				<span ></span>
+				<span ></span>
+				<span ></span>
+				<span ></span>
+				<span ></span>
+			</nav>
+		</div>
+		
+		
+	<script src="cssTransform.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//阻止默认	
+		document.addEventListener('touchstart',function (e){
+		    e.preventDefault();
+		})
+		
+		window.onload=function (){	
+			//获取ul和li
+			var  oCarousel = document.getElementById('calPanel');
+			var  aItem = oCarousel.getElementsByClassName('item');
+			//获取trigger小点
+			var oTouchtrigger = document.getElementById('touchtrigger');
+			var aSpan = oTouchtrigger.getElementsByTagName('span');
+			//设置自动播放
+			var timer = 0;
+			var now = 0;
+			//复制ul内容,方便设置跳转条件
+			oCarousel.innerHTML += oCarousel.innerHTML;
+			//设置内包裹ul的css
+			oCarousel.style.width = aItem[0].offsetWidth * aItem.length + 'px';  //设置ul包裹层的宽度
+			oCarousel.style.height = aItem[0].offsetHeight  + 'px';  						//设置ul包裹层的高度
+			//获取外包裹wrap,初始触摸坐标,初始内ul的transformX
+			var oTouchwrap = document.getElementById('touchwrap');
+			var startPoint=0,									//初始触摸
+				  startX=0;										//初始translateX
+			cssTransform(oCarousel,"translateX",0);
+			//使用自动播放
+			autoPlay();
+			//开始触摸,记录初始位置和ul的translateX
+			oTouchwrap.addEventListener('touchstart',function (e){
+				clearInterval(timer);
+				oCarousel.style.transition = "none";
+				//定义变量获取ul的translateX位置
+			    var  translateX = cssTransform(oCarousel,"translateX");
+			    //获取内包裹ul的translateX和wrap的宽度比,四舍五入判断左/右滑动了几张,-1为左滑动1张,+1是右滑动1张  			                         
+			    now =Math.round( translateX / oTouchwrap.offsetWidth );                //这里是负值		
+				if( now == 0){
+					// 点击第1张时,第0张为第2组的第一张,即第10张
+					now = -aSpan.length;     
+					//console.log(now);   //-9
+				}
+				if(now == -aItem.length+1){
+					//点击第2组的最后一张,跳转到第一组的最后一张位置,第9张
+					now = -aSpan.length+1;			
+					//console.log(now); //-8	
+				}	
+				cssTransform(oCarousel,"translateX",now*oTouchwrap.offsetWidth);			//设置translateX位置
+			    startPoint = e.changedTouches[0].pageX;						//获取当前事件触摸坐标
+			    startX = cssTransform(oCarousel,"translateX");				//获取translateX值  
+			})
+			
+			//设置ul的translateX值 
+			oTouchwrap.addEventListener('touchmove',function (e){
+				//开始触摸时候不触发过渡
+			    oCarousel.style.transition = ".5s";	
+			    var nowPoint = e.changedTouches[0].pageX;					//获取手指停止后的触摸坐标
+			    var dis = nowPoint - startPoint;							//获取2次手指坐标的偏移值	
+				cssTransform(oCarousel,"translateX",startX + dis);         //设置translateX的值  （偏移值+触摸时候的translateX值)
+			})
+			
+			//停止触摸
+			oTouchwrap.addEventListener('touchend',function (e){
+				//定义变量再次获取ul的translateX位置
+			     translateX = cssTransform(oCarousel,"translateX");
+			    //获取内包裹ul的translateX和wrap的宽度比,四舍五入判断左/右滑动了几张,-1为左滑动1张,+1是右滑动1张  			                         
+			     now =Math.round( translateX / oTouchwrap.offsetWidth ); 	   	
+			   	//再次设置ul的translateX值           左滑动取整则直接滑动1张
+			    cssTransform(oCarousel,"translateX",now*oTouchwrap.offsetWidth);
+			    tab();
+				autoPlay();	
+			});	
+			
+		function autoPlay(){
+			clearInterval(timer);
+		    timer = setInterval(function (){  	    
+		    	if(now == -aItem.length+1){  
+					now = -aSpan.length+1;			
+				}
+		    	oCarousel.style.transition = "none";
+		    	cssTransform(oCarousel,"translateX",now*oTouchwrap.offsetWidth);
+		    	setTimeout(function (){
+		    	    now --;
+		    		tab();
+		    	},50);   	
+		    },1500);  
+		};
+		
+		function tab(){
+				oCarousel.style.transition = ".5s";
+				cssTransform(oCarousel,"translateX",now*oTouchwrap.offsetWidth);
+		    	for(var i = 0; i<aSpan.length; i++){
+			 		aSpan[i].className = '';	                   
+			 	}
+			 	aSpan[-now % aSpan.length].className = 'active';          //取%,一共9个小点,%9对应
+		}			
+}
+		
+	</script>	
+	</body>
+</html>

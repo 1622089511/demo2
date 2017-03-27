@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<style>
+			body {
+				background: url("bg.jpg") no-repeat top center;
+				margin: 0 auto;
+				width: 100%;
+				line-height: 1.8;
+				font-size: 14px;
+				font-family: "Microsoft YaHei", "微软雅黑";
+			}
+			
+			.wrap {
+				width: 500px;
+				height: 500px;
+				background: #fff;
+				margin: 20px auto;
+			}
+			
+			.item {
+				position: relative;
+			}
+			
+			h1 {
+				color: #00aaee;
+			}
+			
+			a {
+				text-decoration: none;
+				cursor: help;
+				color: #1f3a87;
+			}
+			
+			.toolTipBoxClass {
+				display: block;
+				background: #dbdbdb;
+				line-height: 1.6;
+				border: 1px solid #66CCFF;
+				padding: 20px;
+				font-size: 12px;
+				border-radius: 5px;
+				position: absolute;
+				left: -10px;
+				top: 20px;
+				z-index: 2;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<h1>实现ToolTip效果</h1>
+			<div>ToolTip效果是非常常见的网页特效，它可以在用户将指针放置在控件上时为用户显示提示信息。 比如简称文字显示一行文字全称，例：
+				<a class="item" id="item1" href="#">中国</a>，
+				<a class="item" id="item2" href="#">NBA</a>。 又比如显示一段文字，例：唐诗三百首中的
+				<a class="item" id="item3" href="#">春晓</a>你会么？如果不看tooltip提示你背不出来的话，那么
+				<a class="item" id="item4" href="#">你</a> 可要加油了。</div>
+			<p>ToolTip效果还可以用来显示图片，例：
+				<a class="item" id="item5" href="#">西湖美景</a>。当然显示一块儿带格式的内容也不在话下。</p>
+
+			<p>甚至你可以显示一整个网站：例：
+				<a class="item" id="item6" href="#">百度</a>。</p>
+
+			<p>注意好的ToolTip需要考虑样式、效果、页面的边界等信息，希望你可以做出更漂亮的ToolTip效果。</p>
+		</div>
+		<script>
+			var toolTipBoxClass = "tooltip-box"; 
+			var isIE = navigator.userAgent.indexOf("MSIE") > -1;
+
+			function getId(id) {
+				return document.getElementById(id);
+			}
+
+			function showToolTip(obj, id, html, width, height) {
+				if(document.getElementById(id) == null) {
+					var toolTipxBox;
+					toolTipxBox = document.createElement("div");
+					toolTipxBox.className = "toolTipBoxClass";
+					toolTipxBox.id = id;
+					toolTipxBox.innerHTML = html;
+					toolTipxBox.style.width = width ? width + 'px' : "auto";
+					toolTipxBox.style.height = height ? height + 'px' : "auto";
+					if(!width && isIE) {
+						toolTipxBox.style.width = toolTipxBox.offsetWidth;
+					}
+					obj.appendChild(toolTipxBox);
+					obj.onmouseleave = function() {
+						setTimeout(function() {
+							document.getElementById(id).style.display = "none";
+						}, 300);
+					}
+				} else { 
+					document.getElementById(id).style.display = "block";
+				}
+
+			}
+			window.onload = function() {
+				var p1 = getId('item1');
+				p1.onmouseenter = function() {
+					showToolTip(this, "t1", "中华人民共和国", 100)
+				};
+
+				var p2 = getId('item2');
+				p2.onmouseenter = function() {
+					showToolTip(this, "t2", "<div>美国职业篮球联赛,世界第一职业篮球联赛<div>", 100, 100)
+				};
+
+				var p3 = getId('item3');
+				p3.onmouseenter = function() {
+					showToolTip(this, "t3", "<h2>春晓</h2><p>春眠不觉晓</p><p>处处闻啼鸟</p><p>夜来风雨声</p><p>花落知多少</p>", 150, 200);
+				};
+
+				var p4 = getId('item4');
+				p4.onmouseenter = function() {
+					showToolTip(this, "t4", "<img src='2.jpg'>", 100, 100);
+				};
+
+				var p5 = getId('item5');
+				p5.onmouseenter = function() {
+					showToolTip(this, "t5", "<img src='1.jpg' width='500'> ");
+				};
+
+				var p6 = getId('item6');
+				p6.onmouseenter = function() {
+					var _Html = '<iframe src="http://www.baidu.com/" width="400" height="300"></iframe>';
+					showToolTip(this, "t6", _Html);
+				};
+
+			}
+		</script>
+	</body>
+
+</html>

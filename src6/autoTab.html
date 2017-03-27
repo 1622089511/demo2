@@ -1,0 +1,105 @@
+<!doctype html>                                                             
+<html lang="en">                                                            
+<head>                                                                      
+    <meta charset="UTF-8">                                                  
+	<title>Document</title>                                                 
+	<style type="text/css">                                                 
+    *{margin:0;                                                             
+     padding:0;                                                             
+     font-size:13px;                                                        
+     list-style:none;}                                                      
+                                                                            
+.menu{width:210px;                                                          
+      margin:50px auto;                                                     
+      border:1px solid #ccc;}                                               
+                                                                            
+.menu p{height:25px;                                                        
+        line-height:25px;                                                   
+        font-weight:bold;                                                   
+        background:#eee;                                                    
+        border-bottom:1px solid #ccc;                                       
+        cursor:pointer;                                                     
+        padding-left:5px;}                        
+                                                                            
+.menu div ul{display:none;}                                                 
+                                                                            
+.menu li{height:24px;                                                       
+         line-height:24px;                                                  
+         padding-left:5px;}
+.color{
+	color:red;
+}                                                          
+</style>                                                                    
+<script type="text/javascript">                                             
+function $(id){                                                             
+		return typeof id === 'string'?document.getElementById(id):id;       
+}                                                                       
+function tab(){
+	var index = 0,
+		timer = null,
+		aP = $('menu').getElementsByTagName('P'),
+		aUl =$('menu').getElementsByTagName('ul');
+		for(var i=0;i<aP.length;i++){
+			aP[i].index = i;
+			aP[i].onmouseover = function(){
+				Change(this.index);
+				clearInterval(timer);
+			}
+			aP[i].onmouseout = function(){
+				timer = setInterval(autoPlay,1000);
+			}
+		}
+	//添加定时器，改变当前的索引
+	if(timer){clearInterval(timer); timer=null;}
+	timer = setInterval(autoPlay,1000)
+	function Change(curIndex){
+		for(var j=0;j<aP.length;j++){
+			aP[j].className = '';
+			aUl[j].style.display = 'none';
+		}
+		aP[curIndex].className='color';
+		aUl[curIndex].style.display='block';
+		index = curIndex;  //这里要改成现在的index
+	}
+	function autoPlay(){	
+		index ++;
+		if(index % aP.length == 0){
+			index = 0;			
+		}
+		Change(index);		
+	}
+}
+	
+	
+window.onload=tab;		                                                                                                                            
+	</script>                                                               
+</head>                                                                     
+<body>                                                                      
+	<div class="menu" id="menu">                                            
+		<div>                                                               
+			<p class="color">Web前端</p>                                                    
+			<ul style="display:block;">                                                            
+				<li>JavaScript</li>                                         
+				<li>HTML5</li>                                            
+				<li>CSS3</li>                                             
+			</ul>                                                           
+		</div>                                                              
+		<div>                                                               
+			<p>后台脚本</p>                                                     
+			<ul>                                                            
+				<li>PHP</li>                                                
+				<li>JAVA</li>                                            
+				<li>NODE</li>                                                
+			</ul>                                                           
+		</div>                                                              
+		<div>                                                               
+			<p>前端框架</p>                                                     
+			<ul>                                                            
+				<li>VUE</li>                                              
+				<li>ANGULAR</li>                                           
+				<li>REACT</li>                                                
+			</ul>                                                           
+		</div>                                                              
+	</div>                                                                  
+</body>                                                                     
+</html>                                                                     

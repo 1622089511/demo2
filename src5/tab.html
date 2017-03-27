@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<style type="text/css">
+			*{margin:0;padding: 0};
+			ul{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+				-webkit-text-size-adjust:100%;                                      
+				-webkit-tap-highlight-color:rgba(0,0,0,0); 
+				-webkit-appearance:none;			
+			}
+			body{
+				width:100%;
+				height:100%;
+				overflow: hidden;
+			}
+			
+			.title{
+				font-size: 0;
+				position: relative;
+			}
+			.title .tabmenu{
+				display: inline-block;
+				text-decoration: none;
+				color:#ccc;
+				font-size: 14px;
+				width:45px;
+				text-align: center;
+			}
+			
+			.tabitem a img,
+			.tabitem a{
+				display: block;
+			}
+			 .tabitem{
+				display: inline-block;
+				padding:1px;
+				list-style: none;		
+			}
+			.tabitem a img{
+				width:180px;
+				height:100px;
+			}
+			.clearfix{
+				clear: both;
+			}
+			.clearfix:before,
+			.clearfix:after{
+				content: "";
+				display: table;			
+			}
+			.tabitem{
+				font-size:12px;
+			}
+			.tabitem .alt{
+				color:#51938F
+			}
+			.tabitem .nice{
+				color:#E4B9B9;
+				margin-left:80px;
+			}
+			#tablist{
+				/*width应该根据ul个数来设置*/
+				width:300%; 
+				height:600px;
+				overflow: hidden;
+				margin-top:10px;
+			}
+			.tabPrev,
+			.tabShow,
+			.tabNext{
+				float:left;
+				width:33.333%;
+			}
+			.title .trigger{
+				    position: absolute;
+    				left: 0;
+    				bottom:-5px;
+    				width: 45px;
+    				height: 3px;
+    				background: #6f900d;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<section id="wrap">
+			
+			<nav id="tabtitle" class="title">
+				<a href="javascript:;" class="tabmenu">图片</a>
+				<a href="javascript:;" class="tabmenu">图片</a>
+				<a href="javascript:;" class="tabmenu">图片</a>
+				<a href="javascript:;" class="tabmenu">空白</a>
+				<a href="javascript:;" class="tabmenu">占位</a>
+				<a href="javascript:;" class="tabmenu">空白</a>
+				<a href="javascript:;"class="tabmenu">最后</a>
+				<span class="trigger"></span>
+			</nav>
+			<div id="mainwrap">
+				<div id="tablist">
+					<ul class="tabPrev">	
+						<li class="tabitem">
+							<a href="#">
+								<img src="touchimg/1.jpg" alt="1" />
+								<p class="alt">风景图1   <span class="nice">1.5万</span></p>
+							</a>						
+						</li>
+						<li class="tabitem">
+							<a href="#">
+								<img src="touchimg/2.jpg" alt="1" />
+								<p class="alt">风景图2   <span class="nice">1.5万</span></p>
+							</a>						
+						</li>
+						<li class="tabitem">
+							<a href="#">
+								<img src="touchimg/3.jpg" alt="1" />
+								<p class="alt">风景图3   <span class="nice">1.5万</span></p>
+							</a>						
+						</li>
+						<li class="tabitem">
+							<a href="#">
+								<img src="touchimg/4.jpg" alt="1" />
+								<p class="alt">风景图4  <span class="nice">1.5万</span></p>			
+							</a>						
+						</li>
+											
+				
+					</ul>
+					<ul class="tabShow">
+						
+						<li class="tabitem">
+							<a href="#">
+								<img src="touchimg/5.jpg" alt="1" />
+								<p class="alt">风景图5   <span class="nice">1.5万</span></p>
+							</a>						
+						</li>
+						<li class="tabitem">
+							<a href="#">
+								<img src="touchimg/6.jpg" alt="1" />
+								<p class="alt">风景图6   <span class="nice">1.5万</span></p>
+							</a>						
+						</li>
+							<li class="tabitem">
+							<a href="#">
+								<img src="touchimg/7.jpg" alt="1" />
+								<p class="alt">风景图7   <span class="nice">1.5万</span></p>
+							</a>						
+						</li>
+							<li class="tabitem">
+							<a href="#">
+								<img src="touchimg/8.jpg" alt="1" />
+								<p class="alt">风景图8   <span class="nice">1.5万</span></p>
+							</a>						
+						</li>
+					</ul>
+					<ul class="tabNext">
+						<li class="tabitem">
+							<a href="#">
+								<img src="touchimg/1.jpg" alt="1" />
+								<p class="alt">风景图1   <span class="nice">1.5万</span></p>
+							</a>						
+						</li>
+						<li class="tabitem">
+							<a href="#">
+								<img src="touchimg/2.jpg" alt="1" />
+								<p class="alt">风景图2   <span class="nice">1.5万</span></p>
+							</a>						
+						</li>
+						<li class="tabitem">
+							<a href="#">
+								<img src="touchimg/3.jpg" alt="1" />
+								<p class="alt">风景图3   <span class="nice">1.5万</span></p>
+							</a>						
+						</li>
+						<li class="tabitem">
+							<a href="#">
+								<img src="touchimg/4.jpg" alt="1" />
+								<p class="alt">风景图4  <span class="nice">1.5万</span></p>			
+							</a>						
+						</li>
+						<li class="tabitem">
+							<a href="#">
+								<img src="touchimg/5.jpg" alt="1" />
+								<p class="alt">风景图5<span class="nice">1.5万</span></p>			
+							</a>						
+						</li>
+						<li class="tabitem">
+							<a href="#">
+								<img src="touchimg/6.jpg" alt="1" />
+								<p class="alt">风景图6  <span class="nice">1.5万</span></p>			
+							</a>						
+						</li>		
+					</ul>
+				</div>			
+			</div>
+		</section>
+		<h3>支持手指按下切换和滑动</h3>
+			
+		<script src="cssTransform.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.addEventListener('touchstart',function (e){e.preventDefault()});	
+			window.onload=function (){
+				var oW = document.getElementById('wrap');
+				var oM = document.getElementById('mainwrap');
+				var line = document.querySelector('#tabtitle .trigger');
+				var panel = document.getElementById('tablist');
+				var menu = document.getElementsByClassName('tabmenu');
+				var scree = document.getElementsByTagName('html')[0].getBoundingClientRect().width;
+				var pL = panel.offsetWidth/3;
+				
+				var  w = menu[0].offsetWidth;								//line的参数
+				var  l   = menu.length;
+				var len = w * (l-1) ;
+				
+				var starX = 0;															//初始line偏移
+				var startX2 = 0;                                                      //初始panel偏移
+				var startP = 0;    														//按下
+				var nowP = 0;  														 //移动
+				var flag = 0;    														 //startP - nowP
+				var step = 0;															//比率
+				
+				//initial
+				cssTransform(line,'translateX',0);
+				cssTransform(panel,'translateX',0);
+				tab();
+				
+				oM.addEventListener('touchstart',function (e){
+				    startP = e.changedTouches[0].pageX;				//开始手指位置
+				    startX = cssTransform(line,'translateX');  			//line的translateX
+				    startX2 =  cssTransform(panel,'translateX');		//panel的transalateX
+				})		
+				oM.addEventListener('touchmove',function (e){
+					nowP = e.changedTouches[0].pageX;				//拖动后手指位置
+				    flag = nowP - startP;											//判断条件>0右滑,<0左滑   
+					cssTransform(panel,'translateX',flag+startX2);	  		 
+			    	line.style.transition = ".5s";	    
+				    panel.style.transition = ".5s";		    
+				})
+				oM.addEventListener('touchend',function (){
+					startX2 =  cssTransform(panel,'translateX');		
+				    step = Math.round( startX2 / pL ) ;  
+				    if(step >0){
+				    	step = 0 ;
+				    }else if(step < -l +1){
+				    	step =  -l + 1
+				    }
+					cssTransform(panel,'translateX',step*scree);	
+				    cssTransform(line,'translateX',-step*w);		
+				})
+		
+		
+		//点击切换
+		function tab(){
+			for(var i = 0;i<l;i++){					
+				menu[i].index = i;	
+				menu[i].addEventListener('touchstart',function (e){
+					line.style.transition = ".5s";	    
+				    panel.style.transition = ".5s";	
+					cssTransform(line,'translateX',w*this.index );		  
+					cssTransform(panel,'translateX',-scree*this.index );
+					e.stopPropagation();	
+				})
+			}
+		}			
+	}
+			
+			
+			
+	</script>
+	</body>
+</html>

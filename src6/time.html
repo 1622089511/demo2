@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+    	.newyear{
+    		border:1px solid red;
+    		width:400px;
+    		height:50px;
+			text-align: center;	
+    		margin: 0 auto;
+    	}
+    	.mess{	
+    		margin:0 auto;
+    		margin-top: 100px;
+    		height:200px;
+    		width: 300px;
+    		border: 1px solid red;	
+    	}
+    	.mess div{
+    		margin-bottom: 20px;
+    	} 
+    </style>
+</head>
+<body>
+	<div class="newyear">
+		<div>距离2018过年还剩 <span id="countDown"></span></div>
+	</div>   
+	
+	<form class="mess">
+		<h5>手机验证码60s倒计时测试</h5>
+		<div>
+			<input type="text" id="user" placeholder="手机号码" />
+			<input type="button" id="send" value="发送验证码">
+		</div>
+		
+		<div>
+			<input type="text"  placeholder="填写手机验证码"/>
+		</div>
+			
+		<input type="submit" value="登录"/>
+		
+	</form>
+<script>
+    
+    window.onload=function (){
+    
+	    var timer=setInterval(showTime,500);
+		showTime();
+	    function showTime() {
+	        var nowTime=new Date();            				//当前时间
+	        var endTime=new Date("2018/2/16,0:00:00");      //目标时间
+	        var leftTime = parseInt( (endTime.getTime() - nowTime.getTime() )/1000 ); //到秒为止
+	        //3600秒  60分钟  1小时  1/24天
+	        var d = parseInt(leftTime / (24*60*60));       	//天
+	        var h = parseInt(leftTime / (60*60) % 24);  	//小时
+	        var m = parseInt(leftTime/ 60 % 60);  			//分钟
+	        var s = parseInt(leftTime % 60 ); 				//秒
+	        var cont = document.querySelector('#countDown');
+	        cont.innerText =d+'天'+h+'小时'+m+'分钟'+s+'秒';
+	        if(leftTime <= 0){
+	            document.querySelector('#countDown').innerText = '结束' ;
+	            clearInterval(timer);
+	        }
+	    }
+	    
+		
+	   
+		var times=60,
+			timer2 = null;
+		
+		var send = document.getElementById('send');
+		
+		send.addEventListener('click',function (){
+		    timer2 = setInterval(countDown,1000);
+		})
+		
+   
+   		function countDown(){
+    		times--;
+			send.setAttribute('disabled','disabled');
+			send.value=times + '秒后重试';				
+			if(times == 0){
+				clearInterval(timer2);
+				send.value = '再次发送验证码';
+				send.removeAttribute('disabled');
+				times = 60;
+			}	
+		}
+   		
+	}
+</script>
+</body>
+</html>

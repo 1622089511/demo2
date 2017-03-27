@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    	*{margin: 0;padding:0;}
+        .left{
+            width: 70%;
+            height: 2600px;
+            background: greenyellow;
+            float:left;
+        }
+        .right{
+            width: 30%;
+            height: 1000px;
+            background: red;
+            float:right;
+        }
+        .wrap{position:relative; height: 1000px;}
+        .wrap p{position:absolute; bottom:0;color:#000000; z-index:2;
+        			font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+     <div class="left">
+     	<h2>仿淘宝如果右侧小于一个页面,底部不会留白</h2>
+     </div>
+     <div class="right" id="right">
+         <div class="wrap">
+             <p>这是底部,这里滚动不会留白</p>
+         </div>
+     </div>
+
+
+
+   <script src="http://code.jquery.com/jquery.js"></script>
+   <script>
+       /*console.log($(window).height()); */
+       /*var jWindow=$(window);
+       jWindow.scroll(function () {
+          var scrollHeight= jWindow.scrollTop();
+          var screenHeight = jWindow.height();
+
+          var sideHeight = $('.right').height();
+          if(scrollHeight + sideHeight > sideHeight){
+              $('.right').css({
+                 'position': 'fixed',
+                  'top' : -(sideHeight - screenHeight),
+                  'right': 0
+              });
+          }else{
+              $('.right').css({
+                  'position':'static'
+              });
+           }
+       });
+
+       window.onload=function () {
+            jWindow.trigger('scroll');
+       };
+       window.resize=function () {
+            jWindow.trigger('scroll');
+       };
+        */
+      var $ =function (id) {
+            return document.getElementById(id);
+      };
+      var addEvent=function (obj,event,fn) {
+        if(obj.addEventListener){
+            obj.addEventListener(event,fn,false); 
+        }else if(obj.attachEvent){
+            obj.attachEvent('on'+event,fn)
+          }
+      };
+
+       function scrollEvent() {
+           var domSider =  $('right');
+           var sideHeight = domSider.offsetHeight;
+           var screenheiht = document.documentElement.clientHeight || document.body.clientHeight;
+           var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+           if( scrollTop + screenheiht > sideHeight){
+               domSider.style.cssText = 'position:fixed;right:0px;top:'+ (-(sideHeight - screenheiht ))+'px';
+           }else{
+               domSider.style.position = 'static' ;
+           }
+       }
+
+       addEvent(window,'scroll',function () {
+           scrollEvent();
+       });
+       addEvent(window,'resize',function () {
+           scrollEvent();
+       });
+	
+
+
+
+   </script>
+</body>
+</html>
