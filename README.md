@@ -20,7 +20,7 @@
 
 
 ### 移动端原生的无缝轮播图   
-地址：https://1622089511.github.io/demo2/src5/carousel.html   
+地址：https://1622089511.github.io/demo2/src5/carousel.html   
 功能：支持自动播放和滑动切换  
 
 ### 移动端的Tab页面切换   
