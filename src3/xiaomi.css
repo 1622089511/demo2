@@ -13,16 +13,27 @@ ul{
     list-style: none;
 }
 input::-webkit-input-placeholder{text-align: center;}
+.clearfix {
+    zoom: 1;
+    clear: both;
+}
+.clearfix:before, 
+.clearfix:after{
+    content:"";
+    display:table;   
+}
 
-/*开始*/
+/* header*/
 #header{
-    position:relative;
     background:#333;
     height: 40px;
 }
+.headercontent{
+	width: 1228px;height: 40px; margin:0 auto; 
+	position:relative;
+}
 .navbar_left{
-    position:absolute;
-    left: 0;
+   float:left;
 }
 .navbar_left span,.navbar_right span{
     color:#424242;
@@ -42,9 +53,7 @@ input::-webkit-input-placeholder{text-align: center;}
     text-decoration: none;
 }
 .navbar_right{
-    position:absolute;
-    width: 285px;
-    right: 0px;
+    float:right;
     height: 40px;
 }
 .navbar_right .info{
@@ -57,7 +66,6 @@ input::-webkit-input-placeholder{text-align: center;}
     color:#b0ad9a;
     background: #424242;
     position:relative;
-    right : -26px;
 }
 .navbar_right i{
     display: inline-block;
@@ -92,14 +100,14 @@ input::-webkit-input-placeholder{text-align: center;}
     color:#ccc;
 }
 
-
 #nav{
     height:100px;
     background: #fff;
+    width:1228px;
+    margin:0 auto;
 }
 #nav .navwrap{
     height: 100px;
-    margin-left: 62px;
     position: relative;
 }
 #nav .navwrap a{
@@ -109,6 +117,7 @@ input::-webkit-input-placeholder{text-align: center;}
     height:55px; width: 55px;
     background: url("images/nav.gif") no-repeat;
     position: absolute;  top:20px;
+    left:0;
 }
 #nav .navwrap .icon-redmi{
     height:64px; width: 144px;
@@ -126,14 +135,7 @@ input::-webkit-input-placeholder{text-align: center;}
     margin-right: 24px;
     cursor: pointer; color:#333;
 }
-.clearfix {
-    *zoom: 1;
-}
-.clearfix:before, .clearfix:after{
-    content:"";
-    display:table;
-    clear:both;
-}
+
 .nav-ul li:hover , .nav-item a span:hover{
     color:#ff6700;
 }
@@ -142,28 +144,29 @@ input::-webkit-input-placeholder{text-align: center;}
 }
 
 #navform{
-    position: absolute; right: 62px;
-    background: #fff;
+  padding:24px 0;
+  float:right;
+  height:52px;
 }
 .navform_text{
-    width: 296px; height: 48px; line-height: 48px;
-    position:absolute; top:25px; right: 0;
+    width: 296px; 
+    height: 48px; 
+    line-height: 48px;
     border: 1px solid #e0e0e0;
     outline-color:#ff6700;
-
+    float:left;
 }
 .navform_search{
-    position: absolute; right: 0; top:25px; width: 52px; height: 48px;
+    width: 52px; 
+    height: 48px;
     border: 1px solid #e0e0e0;
-    font-size: 24px;
     line-height: 24px;
     color: #616161;
     -webkit-appearance: button;
     cursor: pointer;
     background: url("images/navform-bg.gif") no-repeat;
-    border-left: none;
-
-
+    float:left;
+   
 }
 .navform_search:hover{
     background: url("images/navform-bg.gif") no-repeat -52px 0;
@@ -229,11 +232,13 @@ input::-webkit-input-placeholder{text-align: center;}
     float:left;
     width:236px;
     background: #656364;
-    padding:20px 0;
+    box-sizing: border-box;
+    padding-top:  20px;
 }
 .carousel-menu-wrap ul li{
     width:236px;
-    height: 42px; line-height: 42px;
+    height: 42px; 
+    line-height: 42px;
     position: relative;
 }
 .carousel-menu-wrap li a{
@@ -306,7 +311,6 @@ input::-webkit-input-placeholder{text-align: center;}
     height: 25px;
     line-height: 25px;
     font-size:12px;
-    text-indent: 0;
     text-align:center;
     border:1px solid #FF6700;
     color:#FF6700;
@@ -395,7 +399,7 @@ input::-webkit-input-placeholder{text-align: center;}
 /*home区域*/
 #home{
     margin:0 auto;
-    width: 1226px;
+    width: 1228px;
     position: relative;
 }
 #home .home-left{
@@ -403,7 +407,6 @@ input::-webkit-input-placeholder{text-align: center;}
     height: 170px;
     background: #5f5750;
     float:left;
-    margin-top:14px;
 }
 #home .home-left li{
     float:left;
@@ -455,13 +458,12 @@ input::-webkit-input-placeholder{text-align: center;}
     top:50px;
 }
 #home .home-right{
-    margin-top:14px;
-    float:left;
-    position: absolute; right: 0;
+    float:right;
+    font-size:0
 }
 #home .home-right li{
-    float:left;
-    margin-left: 16px;
+    display: inline-block;
+    margin-left: 15px;
 }
 #home .home-right img{
     width: 316px; height: 170px;
@@ -495,7 +497,7 @@ input::-webkit-input-placeholder{text-align: center;}
 .star-top{
     position: relative;
     height:58px;
-    margin-top:24px;
+    margin-top: 28px;
 }
 .star-top h1{
     position:absolute;
