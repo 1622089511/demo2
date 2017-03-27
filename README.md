@@ -1,4 +1,4 @@
-# demo说明  
+﻿# demo说明  
 ### 电商首页网站         
 
 地址：https://1622089511.github.io/demo2/src2/index.html    
@@ -25,3 +25,7 @@
 
 ### src6    
 说明：一些常见特效,样式切换，选项卡，拖拽，弹出层，倒计时，tooltip提示，手风琴，自动锚点，canvas时钟，进场动画等特效
+
+###  移动端页面      
+说明：移动端苏宁首页,动态修改使用rem和viewport配置,使用less进行计算和css设置,完成一些移动端的特效，熟悉移动端的一些问题      
+地址：https://1622089511.github.io/demo2/src/msuning.html

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<script type="text/javascript">
+			//set meta ppi
+			var pixelRatio = 1 / window.devicePixelRatio;
+			document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale='+pixelRatio+',maximum-scale='+pixelRatio+', minimum-scale='+pixelRatio+'"/>')
+			//set root fontSize
+			var html = document.getElementsByTagName('html')[0];
+			var hw = html.getBoundingClientRect().width;
+			html.style.fontSize = hw/10 + 'px';
+		</script>
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+		<title>苏宁demo</title>
+	</head>
+	<body>
+		<!--header menu-->
+		<header class="header-box clearfix">
+			<div class="header-classify">	
+			</div>
+			<div class="search">
+				<form action="#" class="search-form">
+					<i class="ico-search"></i>
+					<input type="text" class="search-input" placeholder="华为荣耀最后1天预定！"/>
+				</form>
+			</div>
+			<div class="shop-car">
+			</div>
+		</header>
+		<!--轮播图 & nav区 & 头条-->
+		<section class="main" id="search">
+			<div class="carousel">
+				<ul class="carousel-list clearfix">
+					<li class="carousel-item"><a href="#"><img src="//image4.suning.cn/uimg/cms/img/148853183135801640.jpg"/></a></li>
+					<li class="carousel-item"><a href="#"><img src="//image4.suning.cn/uimg/cms/img/148853183135801640.jpg"/></a></li>
+					<li class="carousel-item"><a href="#"><img src="//image4.suning.cn/uimg/cms/img/148853183135801640.jpg"/></a></li>
+					<li class="carousel-item"><a href="#"><img src="//image4.suning.cn/uimg/cms/img/148853183135801640.jpg"/></a></li>
+					<li class="carousel-item"><a href="#"><img src="//image4.suning.cn/uimg/cms/img/148853183135801640.jpg"/></a></li>
+					<li class="carousel-item"><a href="#"><img src="//image4.suning.cn/uimg/cms/img/148853183135801640.jpg"/></a></li>
+					<li class="carousel-item"><a href="#"><img src="//image4.suning.cn/uimg/cms/img/148853183135801640.jpg"/></a></li>
+					<li class="carousel-item"><a href="#"><img src="//image4.suning.cn/uimg/cms/img/148853183135801640.jpg"/></a></li>
+				</ul>
+				<div class="trigger">
+					<ul>
+						<li class="trigger-btn active"></li>
+						<li class="trigger-btn"></li>
+						<li class="trigger-btn"></li>
+						<li class="trigger-btn"></li>
+						<li class="trigger-btn"></li>
+						<li class="trigger-btn"></li>
+						<li class="trigger-btn"></li>
+						<li class="trigger-btn"></li>
+					</ul>	
+				</div>
+			</div>
+			<!--导航区-->
+			<nav class="nav clearfix">
+				<a href="#"  class="nav-item">
+					<img src="img/nav1.jpg" alt="col1" />
+					<strong class="nav-title">大聚惠</strong>
+				</a>
+				<a href="#"  class="nav-item">
+					<img src="img/nav1.jpg" alt="col1" />
+					<strong class="nav-title">大聚惠</strong>
+				</a>
+				<a href="#"  class="nav-item">
+					<img src="img/nav1.jpg" alt="col1" />
+					<strong class="nav-title">大聚惠</strong>
+				</a>
+				<a href="#"  class="nav-item">
+					<img src="img/nav1.jpg" alt="col1" />
+					<strong class="nav-title">大聚惠</strong>
+				</a>
+				<a href="#"  class="nav-item">
+					<img src="img/nav1.jpg" alt="col1" />
+					<strong class="nav-title">大聚惠</strong>
+				</a>
+				<a href="#"  class="nav-item">
+					<img src="img/nav1.jpg" alt="col1" />
+					<strong class="nav-title">大聚惠</strong>
+				</a>
+				<a href="#"  class="nav-item">
+					<img src="img/nav1.jpg" alt="col1" />
+					<strong class="nav-title">大聚惠</strong>
+				</a>
+				<a href="#"  class="nav-item">
+					<img src="img/nav1.jpg" alt="col1" />
+					<strong class="nav-title">大聚惠</strong>
+				</a>
+				<a href="#"  class="nav-item">
+					<img src="img/nav1.jpg" alt="col1" />
+					<strong class="nav-title">大聚惠</strong>
+				</a>
+				<a href="#"  class="nav-item">
+					<img src="img/nav1.jpg" alt="col1" />
+					<strong class="nav-title">大聚惠</strong>
+				</a>
+			</nav>
+			<!--新闻-->
+			<div class="suning-news">
+				<div class="suning-news-img"></div>
+				<div class="suning-news-line"></div>
+				<ul class="suning-news-list">
+					<li class="news-item"><a href="#">今年全球诞生了20件黑科技</a></li>
+					<li class="news-item"><a href="#">苹果财报低于预期 三星创新高</a></li>
+				</ul>
+			</div>			
+		</section>
+		<!--广告-->
+		<div class="ad clearfix">
+			<div class="ad-line1">
+				<a href="#"><img class="ad-line1-img1"src="img/adl-1.jpg" alt="1" /></a>
+				<a href="#"><img class="ad-line1-img2" src="img/adl-2.jpg" alt="2" /></a>
+				<a href="#"><img class="ad-line1-img3"src="img/adl-3.jpg" alt="3" /></a>
+			</div>
+			<div class="ad-line2">
+				<a href="#">
+					<img src="img/ad-line2-ad1.jpg" alt="" />
+				</a>
+				<a href="#">
+					<img src="img/ad-line2-ad1.jpg" alt="" />
+				</a>
+				<a href="#">
+					<img src="img/ad-line2-ad1.jpg" alt="" />
+				</a>
+				<a href="#">
+					<img src="img/ad-line2-ad1.jpg" alt="" />
+				</a>
+			</div>
+			<div class="ad-line2">
+				<a href="#">
+					<img src="img/ad-line2-ad1.jpg" alt="" />
+				</a>
+				<a href="#">
+					<img src="img/ad-line2-ad1.jpg" alt="" />
+				</a>
+				<a href="#">
+					<img src="img/ad-line2-ad1.jpg" alt="" />
+				</a>
+				<a href="#">
+					<img src="img/ad-line2-ad1.jpg" alt="" />
+				</a>
+			</div>
+			
+		</div>
+		<!--苏宁抢购-->
+		<div class="suning-qg">
+			<div class="suning-qg-brand clearfix">
+				<div class="brand-left">
+						<h3 class="brand-title"></h3>
+						<div class="brand-time">
+							<span class="time-clock">20点场</span>		
+						</div>
+						<div class="count">
+							<span class="time-hours">03</span>
+							<span class="time-item">:</span>
+							<span class="time-minutes">54</span>
+							<span class="time-item">:</span>
+							<span class="time-seconds">20</span>
+							<span>;</span>
+						</div>
+				</div>
+				<div class="brand-right">
+					<a href="#" class="brand-right-ad1"></a>
+					<a href="#" class="brand-right-ad2"></a>
+				</div>
+			</div>
+			<div class="suning-qg-content">
+				<ul class="qg-content-list">
+					<li class="qg-content-item">
+						<a href="#"><img src="img/qg-content-ad.jpg" alt="#" class="qg-img"/></a>
+						<div class="qg-content-bottom">
+							<span class="qg-price">￥15.90</span>
+							<del class="qg-zk">￥56.00</del>    
+							<span class="qg-bg">
+								<i class="i1">2.</i>
+								<i class="i2">8</i>
+								<i class="i3">折</i>
+							</span>  
+						</div>
+					</li>
+					<li class="qg-content-item">
+						<a href="#"><img src="img/qg-content-ad.jpg" alt="#" class="qg-img"/></a>
+						<div class="qg-content-bottom">
+							<span class="qg-price">￥15.90</span>
+							<del class="qg-zk">￥56.00</del>    
+							<span class="qg-bg">
+								<i class="i1">2.</i>
+								<i class="i2">8</i>
+								<i class="i3">折</i>
+							</span>  
+						</div>
+					</li>
+					<li class="qg-content-item">
+						<a href="#"><img src="img/qg-content-ad.jpg" alt="#" class="qg-img"/></a>
+						<div class="qg-content-bottom">
+							<span class="qg-price">￥15.90</span>
+							<del class="qg-zk">￥56.00</del>    
+							<span class="qg-bg">
+								<i class="i1">2.</i>
+								<i class="i2">8</i>
+								<i class="i3">折</i>
+							</span>  
+						</div>
+					</li>
+					<li class="qg-content-item">
+						<a href="#"><img src="img/qg-content-ad.jpg" alt="#" class="qg-img"/></a>
+						<div class="qg-content-bottom">
+							<span class="qg-price">￥15.90</span>
+							<del class="qg-zk">￥56.00</del>    
+							<span class="qg-bg">
+								<i class="i1">2.</i>
+								<i class="i2">8</i>
+								<i class="i3">折</i>
+							</span>  
+						</div>
+					</li>
+					<li class="qg-content-item">
+						<a href="#"><img src="img/qg-content-ad.jpg" alt="#" class="qg-img"/></a>
+						<div class="qg-content-bottom">
+							<span class="qg-price">￥15.90</span>
+							<del class="qg-zk">￥56.00</del>    
+							<span class="qg-bg">
+								<i class="i1">2.</i>
+								<i class="i2">8</i>
+								<i class="i3">折</i>
+							</span>  
+						</div>
+					</li>
+					<li class="qg-content-item">
+						<a href="#"><img src="img/qg-content-ad.jpg" alt="#" class="qg-img"/></a>
+						<div class="qg-content-bottom">
+							<span class="qg-price">￥15.90</span>
+							<del class="qg-zk">￥56.00</del>    
+							<span class="qg-bg">
+								<i class="i1">2.</i>
+								<i class="i2">8</i>
+								<i class="i3">折</i>
+							</span>  
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--中间广告-->
+		<div class="main-ad">
+			<a href="#" class="main-ad-left">
+				<img src="img/main-ad-phone.jpg" alt="手机专享"/>
+			</a>
+			<a href="#" class="main-ad-right">
+				<img src="img/main-ad-zdm.jpg" alt="值得买"/>
+			</a>
+		</div>	
+		<!--大聚惠-->
+		<div class="template-goods clearfix">
+			<h1 class="template-title">大聚惠·精编</h1>
+			<div class="tem-content-left">
+				<a class="tem-link1" href="#">
+					<img src="img/tem-ad/tem-ad4.jpg" alt="手机盛宴" />
+				</a>
+			</div>
+			<div class="tem-content-right">
+				<a  href="#" class="tem-content-rt">
+					<img src="img/tem-ad/tem-ad3.jpg" alt="" />
+				</a>
+				<a href="#" class="tem-content-rb">
+					<img src="img/tem-ad/tem-ad2.jpg" alt="" />
+				</a>
+				<a href="#" class="tem-content-rb">
+					<img src="img/tem-ad/tem-ad1.jpg" alt="" />
+				</a>
+			</div>		
+		</div>
+		<!--好店推荐-->
+		<div class="favor">
+			<div class="favor-title">好店推荐</div>
+			<ul class="favor-list clearfix">
+				<li class="favor-item">
+					<div class="fi-head">
+						<a href="#" class="fi-icon-wrap">
+							<img src="img/favor/favor-icon1.png" alt="" />
+						</a>
+						<div class="fi-icon-title">
+							<span class="fi-title1">搞机大咖</span>
+							<span class="fi-title2">潮机新时尚</span>
+						</div>
+					</div>
+					<div class="fi-img">
+						<a href="#"><img class= "fi-img1" src="img/favor/fi-ad1.jpg" alt="手机1"  /></a>
+						<a href="#"><img  class="fi-img2" src="img/favor/fi-ad3.jpg" alt="手机2" /></a>
+						<a href="#" ><img class="fi-img3" src="img/favor/fi-ad2.jpg" alt="手机3" /></a>
+					</div>
+					
+				</li>
+				<li class="favor-item">
+					<div class="fi-head">
+						<a href="#" class="fi-icon-wrap">
+							<img src="img/favor/favor-icon1.png" alt="" />
+						</a>
+						<div class="fi-icon-title">
+							<span class="fi-title1">搞机大咖</span>
+							<span class="fi-title2">潮机新时尚</span>
+						</div>
+					</div>
+					<div class="fi-img">
+						<a href="#"><img class= "fi-img1" src="img/favor/fi-ad1.jpg" alt="手机1"  /></a>
+						<a href="#"><img  class="fi-img2" src="img/favor/fi-ad3.jpg" alt="手机2" /></a>
+						<a href="#" ><img class="fi-img3" src="img/favor/fi-ad2.jpg" alt="手机3" /></a>
+					</div>
+					
+				</li>
+				<li class="favor-item">
+					<div class="fi-head">
+						<a href="#" class="fi-icon-wrap">
+							<img src="img/favor/favor-icon1.png" alt="" />
+						</a>
+						<div class="fi-icon-title">
+							<span class="fi-title1">搞机大咖</span>
+							<span class="fi-title2">潮机新时尚</span>
+						</div>
+					</div>
+					<div class="fi-img">
+						<a href="#"><img class= "fi-img1" src="img/favor/fi-ad1.jpg" alt="手机1"  /></a>
+						<a href="#"><img  class="fi-img2" src="img/favor/fi-ad3.jpg" alt="手机2" /></a>
+						<a href="#" ><img class="fi-img3" src="img/favor/fi-ad2.jpg" alt="手机3" /></a>
+					</div>
+					
+				</li>
+			</ul>		
+			<ul class="favor-trigger">
+				<li class="trigger-btn active"></li>
+				<li class="trigger-btn"></li>
+				<li class="trigger-btn"></li>
+			</ul>
+		</div>
+		<!--猜你喜欢-->
+		<div class="guesslike">
+			<div class="head">
+				<span class="icon"></span>
+				猜你喜欢
+			</div>
+			<ul class="guess-group">
+				<li class="guess-item">
+					<a href="#"><img src="img/guess-img2.jpg" alt="#" class="like" /></a>			
+					<div class="itemword">
+						<div class="itemdis">
+							原装联想原装联想原装联想原装联想原装联想原装联想原装联想原装联想原装联想原装联想原装联想
+						</div>
+						<p class="money">
+							￥89.00
+						</p>
+					</div>
+				</li>
+					<li class="guess-item">
+					<a href="#"><img src="img/guess-img2.jpg" alt="#" class="like" /></a>			
+					<div class="itemword">
+						<div class="itemdis">
+							原装联想原装联想原装联想原装联想原装联想原装联想原装联想原装联想原装联想原装联想原装联想
+						</div>
+						<p class="money">
+							￥89.00
+						</p>
+					</div>
+				</li>
+					<li class="guess-item">
+					<a href="#"><img src="img/guess-img2.jpg" alt="#" class="like" /></a>			
+					<div class="itemword">
+						<div class="itemdis">
+							原装联想原装联想原装联想原装联想原装联想原装联想原装联想原装联想原装联想原装联想原装联想
+						</div>
+						<p class="money">
+							￥89.00
+						</p>
+					</div>
+				</li>
+				
+					<li class="guess-item">
+					<a href="#"><img src="img/guess-img2.jpg" alt="#" class="like" /></a>			
+					<div class="itemword">
+						<div class="itemdis">
+							原装联想原装联想原装联想原装联想原装联想原装联想原装联想原装联想原装联想原装联想原装联想
+						</div>
+						<p class="money">
+							￥89.00
+						</p>
+					</div>
+				</li>
+			</ul>	
+		</div>
+		<!--版权-->
+		<div class="download">
+			<a href="#">
+				<img src="img/download.jpg" alt="下载" class="downad"/>
+			</a>
+			<a href="javascript:;" class="del">X</a>
+		</div>
+		<footer class="footlist">
+			<ul class="flexbox">
+				<li><a href="#">登录</a></li>
+				<li><a href="#">注册</a></li>
+				<li><a href="#">电脑版</a></li>
+				<li><a href="#">普通版</a></li>
+				<li><a href="#">客户端</a></li>
+			</ul>
+			<div class="copyright"> Copyright © 2002 -
+				<script type="text/javascript">
+					document.write(new Date().getFullYear())
+				</script>
+				 苏宁 suning.com 版权所有
+			</div>
+		</footer>
+		<!--返回按钮-->
+		<div class="gotop"></div>
+	<script type="text/javascript">
+		
+		var html = document.getElementsByTagName('html')[0];
+		var width = html.getBoundingClientRect().width;
+		
+		
+	</script>	
+	</body>
+</html>
