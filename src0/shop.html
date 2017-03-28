@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>西港商城海外直销店</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/shop.css"/>
+</head>
+<body>
+<div class="shop">
+    <div class="topWrap">
+        <span class="leftbox" onclick="history.go(-1);"></span>
+        海外直销店
+    </div>
+    <!--搜索部分-->
+    <div class="search">
+        <span class="category"></span>
+
+        <form class="search-form" action="#">
+            <input class="form-input" type="search" placeholder="想要什么？"/>
+            <input class="form-submit" type="submit" value="搜索"/>
+        </form>
+    </div>
+    <!--店招部分-->
+    <div class="shop-header">
+        <section class="section-img">
+            <img class="header-img" src="img/banner01_02.jpg" alt=""/>
+        </section>
+        <section class="header-logobar">
+            <div class="headerwarp">
+                <img class="img-logo" src="img/shop-logo.png" alt=""/>
+
+                <div class="shop-name">西港商城海外直销店</div>
+            </div>
+            <a class="shoucang">
+                <span></span>
+
+                <p>收藏</p>
+            </a>
+        </section>
+    </div>
+
+    <div class="shopBar">
+        <span>
+            <i class="item1"></i>
+            <em>店铺首页</em>
+        </span>
+        <span>
+             <i class="item2"></i>
+            <em>全部商品</em>
+        </span>
+        <span>
+             <i class="item3"></i>
+            <em>店铺上新</em>
+        </span>
+        <span>
+             <i class="item4"></i>
+            <em>店铺促销</em>
+        </span>
+    </div>
+
+    <div class="shop-home-list">
+        <div class="shop-home-item1">
+            <a href="#"> <img src="img/banner01_08.png" alt=""/></a>
+            <a href="#"> <img src="img/banner01_10.png" alt=""/></a>
+        </div>
+        <ul class="clearfix goods-list">
+            <li>
+                <a href="#">
+                    <div class="imgs">
+                        <span class="pos-img"><img src="img/goods01.png" alt=""></span>
+                    </div>
+                    <div class="info">
+                        <p>花花公子外套男春季2017新款韩版修身帅气夹克男青年休闲棒球服潮</p>
+
+                        <div class="price-ico">
+                            ￥98.5
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="imgs">
+                        <span class="pos-img"><img src="img/goods01.png" alt=""></span>
+                    </div>
+                    <div class="info">
+                        <p>花花公子外套男春季2017新款韩版修身帅气夹克男青年休闲棒球服潮</p>
+
+                        <div class="price-ico">
+                            ￥98.5
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--底部菜单-->
+<div class="shop-footer clearfix">
+    <a href="shop_fenlei.html">商品分类</a>
+    <a href="shopdetail.html">店铺详情</a>
+    <a class="last-item" href="shop_fenlei.html"><i></i>热门分类</a>
+</div>
+</body>
+</html>
+<script>
+    var category=document.getElementsByClassName("category")[0];
+    category.onclick= function () {
+        window.location=("shop_fenlei.html");
+    }
+</script>

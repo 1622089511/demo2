@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="author" content=" ">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <!-- 添加到主屏幕“后，全屏显示-->
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes"/>
+    <title>济西港商城-订单信息</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body style="background: #e5e5e5;">
+<div id="order_wrap">
+    <div class="topWrap">
+        <span class="leftbox" onclick="history.go(-1);"></span>
+        西港商城-我的订单
+    </div>
+    
+    <section class="address">
+        <div class="addr_box" onclick="window.open('addr_manage.html','_self');">
+            <div class="name_info">白杨&nbsp;&nbsp;13571946304</div>
+            <address><i></i>陕西省西安市雁塔区科技二路普盛大厦市雁塔区科技二路普盛大厦</address>
+            <span class="iconfont icon-angle-right-copy"></span>
+        </div>
+        <div class="no-address" style="display: none;">
+            <img src="img/address.png" alt=""/>
+            <div class="addr-font">添加收货地址</div>
+        </div>
+    </section>
+    <section class="goodsList">
+        <ul class="ul_list">
+            <li>
+                <a href="#">
+                    <div class="goods_img"><img src="img/goods01.png" alt=""/></div>
+                    <div class="goods_descrip">
+                        <div class="goods_name">
+                            <div class="goods_title">
+                                <h2>德国APtmil爱他美婴幼儿</h2>
+                                <span>配方奶粉1+段<i>（12-24个月宝宝600g）</i></span>
+                            </div>
+                            <div class="price">￥1300</div>
+                        </div>
+                        <div class="goods_number">20罐</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="goods_img"><img src="img/goods01.png" alt=""/></div>
+                    <div class="goods_descrip">
+                        <div class="goods_name">
+                            <div class="goods_title">
+                                <h2>德国APtmil爱他美婴幼儿</h2>
+                                <span>配方奶粉1+段<i>（12-24个月宝宝600g）</i></span>
+                            </div>
+                            <div class="price">￥1300</div>
+                        </div>
+                        <div class="goods_number">20罐</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="goods_img"><img src="img/goods01.png" alt=""/></div>
+                    <div class="goods_descrip">
+                        <div class="goods_name">
+                            <div class="goods_title">
+                                <h2>德国APtmil爱他美婴幼儿</h2>
+                                <span>配方奶粉1+段<i>（12-24个月宝宝600g）</i></span>
+                            </div>
+                            <div class="price">￥1300</div>
+                        </div>
+                        <div class="goods_number">20罐</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="goods_img"><img src="img/goods01.png" alt=""/></div>
+                    <div class="goods_descrip">
+                        <div class="goods_name">
+                            <div class="goods_title">
+                                <h2>德国APtmil爱他美婴幼儿</h2>
+                                <span>配方奶粉1+段<i>（12-24个月宝宝600g）</i></span>
+                            </div>
+                            <div class="price">￥1300</div>
+                        </div>
+                        <div class="goods_number">20罐</div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+    
+   <section id="payment">
+       <div class="pay_name">支付方式</div>
+       <div class="ul_tab_pay">
+           <li class="ons">微信支付</li>
+           <li>银联支付</li>
+           <li>西安银行</li>
+       </div>
+   </section>
+
+    <section id="youhuijuan" onClick="window.location.href='yhj.html'">
+        <div class="yhj_name">优惠券</div>
+        <span class="font-con">不可用</span>
+        <i class="rightmimages"></i>
+    </section>
+
+    <section id="price_wrap">
+        <ul>
+            <li><span>商品金额</span><span>￥1630</span></li>
+            <li><span>运费</span><span>￥0.0</span></li>
+        </ul>
+    </section>
+
+    <section id="liuyan">
+        <div class="yhj_name">用户留言</div>
+        <input type="text"/>
+    </section>
+
+    <div style="height: 50px;"></div>
+    <section id="order_ok">
+        <span>实付款：￥1630</span>
+        <input type="submit" value="提交订单"/>
+    </section>
+</div>
+
+
+<script src="js/zepto.js"></script>
+<script>
+    //    支付单选脚本
+    $(".ul_tab_pay li").click(function(){
+        $(this).addClass("ons").siblings("li").removeClass("ons");
+    });
+//    代金券展开和关闭
+    $(".yhj_number").hide();
+    $(".yhj_name").click(function(){
+        $(".yhj_number").slideToggle();
+    })
+//    优惠券选择
+    $(".yhj_list li i").on("click", function (e) {
+        e.preventDefault();
+        if($(this).hasClass("active")){
+            $(this).removeClass("active");
+        }else{
+            $(this).addClass("active").parent().siblings().find("i").removeClass("active");
+        }
+    });
+</script>
+
+</body>
+</html>

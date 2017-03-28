@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <meta name="apple-mobile-web-app-title" content="西港">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes"/>
+    <!--<meta name="baidu-tc-cerfication" content="ba07d70ead40fe3171a72dc4099ed4e5">-->
+    <!--<meta name="full-screen" content="yes">-->
+    <!--<meta name="x5-fullscreen" content="true">-->
+    <!--<meta name="browsermode" content="application">-->
+    <!--<meta name="x5-page-mode" content="app">-->
+    <title>首页-西港商城</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/zepto.js"></script>
+    <script src="js/echo.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script>
+    	//set rem
+        setSize();
+        window.addEventListener("resize", setSize, false);
+        window.addEventListener("orientationchange", setSize, false);
+        function setSize() {
+            var html = document.getElementsByTagName('html')[0];
+            var width = html.getBoundingClientRect().width; 
+            width = width > 640 ? 640 : width;
+            html.style.fontSize = width / 16 + "px";
+        }
+    </script>
+    <script>
+        echo.init(); 
+    </script>
+    <script>
+    $(document).ready(function () {
+        var mySwiper = new Swiper('#slide',{
+            autoplay: 3000,
+            visibilityFullFit: true,
+            loop: true,
+            speed :500, 
+            autoplayDisableOninteraction:false,
+            autoplayStopOnLast:true,
+            pagination: '.pagination'
+        });
+    });
+</script>
+</head>
+<body>
+
+<div class="jd_layout">
+    <!--头部搜索-->
+    <header class="jd_header">
+        <div class="jd_header_box">
+            <a href="#" class="icon_logo"></a>
+            <form action="#">
+                <span class="icon_search" ></span>
+                <!--定义能调出搜索按钮的方式-->
+                <input type="search" placeholder="想要什么"/>
+            </form>
+            <a href="#" class="login"></a>
+        </div>
+    </header>
+    <!-- 轮播图-->
+    <div id="slide">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="#">
+                    <img src="img/banner01_02.jpg"/>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <img src="img/banner01_06.png"/>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <img src="img/banner01_08.png"/>
+                </a>
+            </div>
+        </div>
+        <div class="pagination"></div>
+    </div>
+    <!--导航栏-->
+    <nav class="jd_nav">
+        <ul>
+            <li>
+                <a href="">
+                    <img src="img/nav0.png" alt=""/>
+                    <p>奶粉</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/nav1.png" alt=""/>
+                    <p>纸尿裤</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/nav2.png" alt=""/>
+                    <p>婴儿辅食</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/nav3.png" alt=""/>
+                    <p>婴儿用品</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/nav4.png" alt=""/>
+                    <p>彩妆</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/nav5.png" alt=""/>
+                    <p>护肤品</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/nav6.png" alt=""/>
+                    <p>营养保健</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/nav7.png" alt=""/>
+                    <p>家居厨具</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+   <div class="main">
+       <!--限时特卖-->
+       <section class="floor">
+           <div class="xg-top">
+               <span class="sk_icon"><img src="img/temai.png" alt=""/></span>
+               <div class="sk_time">
+                   <!--<span class="name">本场结束还有</span>-->
+                   <span class="num">07</span>
+                   <span class="str">:</span>
+                   <span class="num">33</span>
+                   <span class="str">:</span>
+                   <span class="num">00</span>
+               </div>
+               <a class="more" href="#">更多优惠</a>
+           </div>
+           <div class="xg-bottom">
+               <a href="#"><img src="img/blank.gif" data-echo="img/banner01_04.png" alt=""/></a>
+               <a href="#"><img src="img/blank.gif" data-echo="img/banner01_06.png" alt=""/></a>
+           </div>
+       </section>
+
+       <!--发现好货-->
+       <section class="floor">
+           <div class="xg-top">
+               <span class="sk_icon"><img src="img/haohuo.png" alt=""/></span>
+               <a class="more1" href="#">本期推荐:《一罐奶粉的奇妙之旅》</a>
+           </div>
+           <div class="xg-bottom" style="background: #fff;">
+               <a>
+                   <video oncontextmenu="return false;" poster="img/poster.png" preload="none" x-webkit-airplay="true" webkit-playsinline="true" playsinline="" id="video_id_1488870681531" width="100%" height="100%" style="overflow: hidden; box-sizing: border-box;" controls="controls">
+                       <source src="http://200056856.vod.myqcloud.com/200056856_8ef9692afe2511e6897b4f91b042649d.f20.mp4" type="video/mp4">
+                   </video>
+               </a>
+               <a href="#"><img  src="img/blank.gif" data-echo="img/banner01_08.png" alt=""/></a>
+           </div>
+       </section>
+
+       <!--新品上架-->
+       <section  class="floor floor1">
+           <div class="new-top">
+               <img src="img/new.png" alt=""/>
+               <a class="more" href="#">查看更多</a>
+           </div>
+           <div class="new-bottom">
+               <ul class="clearfix ul-list1">
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img  src="img/blank.gif" data-echo="img/goods.png" alt=""/>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img  src="img/blank.gif" data-echo="img/goods02.png" alt=""/>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img   src="img/blank.gif" data-echo="img/goods01.png" alt=""/>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img  src="img/blank.gif" data-echo="img/goods02.png" alt=""/>
+                       </div>
+                   </li>
+               </ul>
+
+               <ul class="clearfix ul-list2">
+                   <li>
+                       <a href="#">
+                           <img src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                           <img src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                           <img src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+               </ul>
+           </div>
+       </section>
+
+       <!--母婴用品-->
+       <section  class="floor floor2">
+           <div class="new-top">
+               <img src="img/muying.png" alt=""/>
+               <a class="more" href="#">查看更多</a>
+           </div>
+
+           <a class="banner" href="#"><img src="img/blank.gif" data-echo="img/banner01_10.png" alt=""/></a>
+           <div class="new-bottom">
+               <ul class="clearfix ul-list1 ul-listwrap1">
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img src="img/blank.gif" data-echo="img/goods.png" alt=""/>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img  src="img/blank.gif" data-echo="img/goods02.png" alt=""/>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img src="img/blank.gif" data-echo="img/goods.png" alt=""/>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img  src="img/blank.gif" data-echo="img/goods02.png" alt=""/>
+                       </div>
+                   </li>
+               </ul>
+
+               <ul class="clearfix ul-list2">
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                           <img src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+               </ul>
+           </div>
+       </section>
+
+       <!--彩妆用品-->
+       <section  class="floor floor3">
+           <div class="new-top">
+               <img  src="img/blank.gif" data-echo="img/ocaizhuang.png" alt=""/>
+               <a class="more" href="#">查看更多</a>
+           </div>
+
+           <a class="banner" href="#"><img  src="img/blank.gif" data-echo="img/banner01_12.png" alt=""/></a>
+           <div class="new-bottom">
+               <ul class="clearfix ul-list2" style="border-top: 0">
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+               </ul>
+
+               <ul class="clearfix ul-list1 ul-listwrap1">
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img  src="img/blank.gif" data-echo="img/goods.png" alt=""/>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img  src="img/blank.gif" data-echo="img/goods02.png" alt=""/>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img  src="img/blank.gif" data-echo="img/goods_01.jpg" alt=""/>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img  src="img/blank.gif" data-echo="img/goods02.png" alt=""/>
+                       </div>
+                   </li>
+               </ul>
+           </div>
+       </section>
+
+       <!--营养保健-->
+       <section  class="floor floor4">
+           <div class="new-top">
+               <img src="img/pyybj.png" alt=""/>
+               <a class="more" href="#">查看更多</a>
+           </div>
+
+           <a class="banner" href="#"><img  src="img/blank.gif" data-echo="img/banner01_14.png" alt=""/></a>
+           <div class="new-bottom">
+               <ul class="clearfix ul-list2" style="border-top: 0">
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+               </ul>
+
+               <ul class="clearfix ul-list1 ul-listwrap1">
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img  src="img/blank.gif" data-echo="img/goods.png" alt=""/>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img  src="img/blank.gif" data-echo="img/goods02.png" alt=""/>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img  src="img/blank.gif" data-echo="img/goods_01.jpg" alt=""/>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img  src="img/blank.gif" data-echo="img/goods02.png" alt=""/>
+                       </div>
+                   </li>
+               </ul>
+           </div>
+       </section>
+
+       <!--家居用品-->
+       <section  class="floor floor5">
+           <div class="new-top">
+               <img src="img/qjjyp.png" alt=""/>
+               <a class="more" href="#">查看更多</a>
+           </div>
+
+           <a class="banner" href="#"><img  src="img/blank.gif" data-echo="img/banner01_16.png" alt=""/></a>
+           <div class="new-bottom">
+               <ul class="clearfix ul-list1 ul-listwrap1">
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img  src="img/blank.gif" data-echo="img/goods.png" alt=""/>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img  src="img/blank.gif" data-echo="img/goods02.png" alt=""/>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img  src="img/blank.gif" data-echo="img/goods_01.jpg" alt=""/>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="deta">
+                           <h3>美国雅诗兰黛</h3>
+                           <h4>品牌直购</h4>
+                           <div class="cart"><i>336.00</i></div>
+                       </div>
+                       <div class="goods">
+                           <img  src="img/blank.gif" data-echo="img/goods02.png" alt=""/>
+                       </div>
+                   </li>
+               </ul>
+
+               <ul class="clearfix ul-list2">
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                           <img  src="img/blank.gif" data-echo="img/goods03.png" alt=""/>
+                           <p class="detafont">小棕瓶面部精露</p>
+                           <span class="price">¥ 265.00</span>
+                       </a>
+                   </li>
+               </ul>
+           </div>
+       </section>
+   </div>
+
+    <div class="index-bottom">
+        <div class="bot">
+            <img src="img/011.png" alt=""/>
+        </div>
+        <div class="bottombox clearfix">
+            <span class="span1"><img  src="img/blank.gif" data-echo="img/code.png" alt=""/></span>
+            <span class="span2"><img  src="img/blank.gif" data-echo="img/xg.png" alt=""/></span>
+        </div>
+    </div>
+
+    <div style="height:46px;width: 100%"></div>
+</div>
+
+
+<div class="footerbox">
+    <ul class="clearfix">
+        <li class="active">
+            <a href="index.html">
+                <span class="shouye"></span>
+                <div class="font">首页</div>
+            </a>
+        </li>
+        <li>
+            <a href="fenlei.html">
+                <span class="fenleibar"></span>
+                <div class="font">分类</div>
+            </a>
+        </li>
+        <li>
+            <a href="cart.html">
+                <span class="gouwuche"></span>
+                <div class="font">购物车</div>
+            </a>
+        </li>
+        <li>
+            <a href="user.html">
+                <span class="gerenzhongxin"></span>
+                <div class="font">个人中心</div>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
+<script>
+    $(".footerbox li").click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+    })
+</script>

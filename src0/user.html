@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-title" content="西港商城">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="telephone=no" name="format-detection">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="topWrap">
+    <span class="leftbox" onclick="history.go(-1);"></span>
+    西港商城-个人中心
+</div>
+<div class="bgs" style=" background: url('img/user-bg.jpg') no-repeat center center;background-size: 100% 100%;">
+    <div class="header"></div>
+</div>
+
+<ul class="user-list">
+    <li>
+        <a href="ddcenter.html">
+           <i class="icon01"></i>
+            订单查询
+            <span></span>
+        </a>
+    </li>
+    <li>
+        <a href="cart.html">
+            <i class="icon02"></i>
+            我的购物车
+            <span></span>
+        </a>
+    </li>
+    <li>
+        <a href="Collection.html">
+            <i class="icon03"></i>
+            我的收藏
+            <span></span>
+        </a>
+    </li>
+    <li>
+        <a href="yhj.html">
+            <i class="icon04"></i>
+            我的代金券
+            <span></span>
+        </a>
+    </li>
+    <li>
+        <a href="addr_manage.html">
+            <i class="icon05"></i>
+            地址维护
+            <span></span>
+        </a>
+    </li>
+</ul>
+<div style="height: 60px"></div>
+<div class="footerbox">
+    <ul class="clearfix">
+        <li>
+            <a href="index.html">
+                <span class="shouye"></span>
+                <div class="font">首页</div>
+            </a>
+        </li>
+        <li>
+            <a href="fenlei.html">
+                <span class="fenleibar"></span>
+                <div class="font">分类</div>
+            </a>
+        </li>
+        <li>
+            <a href="cart.html">
+                <span class="gouwuche"></span>
+                <div class="font">购物车</div>
+            </a>
+        </li>
+        <li class="active">
+            <a href="user.html">
+                <span class="gerenzhongxin"></span>
+                <div class="font">个人中心</div>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
+<script src="js/zepto.js"></script>
+<script>
+    $(".footerbox li").click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+    })
+</script>

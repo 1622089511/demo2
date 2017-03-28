@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="author" content=" ">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <!-- 添加到主屏幕“后，全屏显示-->
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes"/>
+    <title>西港商城-修改地址</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div id="addr_xiugai">
+    <div class="topWrap">
+        <span class="leftbox" onclick="history.go(-1);"></span>
+        西港商城-修改地址
+    </div>
+    <form  name="form1"  method="POST">
+        <div class="address">
+            <ul>
+                <li><span>收货人：</span><span><input  type="text"  maxlength="30" value="" placeholder="请选择收货人姓名"></span></li>
+                <li><span>手机号：</span><span><input  type="text"  value="" placeholder="请填写手机号〜～"></span></li>
+                <li><span>邮政编码：</span><span><input  type="text"  value="" placeholder="邮政编码"></span></li>
+                <li><span>身份证号：</span><span><input  type="text"  value="" placeholder="海关要实名认证哦〜～"></span></li>
+                <li><span>所在地址：</span><span>
+                  <select name="district" id="district">
+                      <option value="">选择省</option>
+                      <option value="">山西</option>
+                      <option value="">陕西</option>
+                      <option value="">北京</option>
+                  </select>
+          <select name="district1" id="district1">
+              <option value="">选择市</option>
+              <option value="">西安</option>
+          </select>
+          <select id="district2">
+              <option value="">选择区</option>
+              <option value="">雁塔</option>
+          </select>
+          		</span></li>
+                <li><span>详细地址：</span><span><input  type="text"  maxlength="50" placeholder="50字以内" value=""></span></li>
+            </ul>
+        </div>
+        <div class="addr_btn">
+            <input id="submitBtn" type="submit" class="submit" value="保存">
+            <input type="button" class="submit submiting" value="保存中..." style="display:none;">
+        </div>
+    </form>
+</div>
+</body>
+</html>

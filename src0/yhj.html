@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="author" content=" ">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <!-- 添加到主屏幕“后，全屏显示-->
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes"/>
+    <title>西港商城-优惠券</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body style="background: #f1f2f6;">
+<div id="addr_xiugai">
+    <div class="topWrap">
+        <span class="leftbox" onclick="history.go(-1);"></span>
+        使用优惠券
+        <a class="shuoming" href="#">使用说明</a>
+    </div>
+   <div class="yhj-tab clearfix">
+       <div class="tab tab1 active">可用优惠券(0)</div>
+       <div class="tab tab2">不可用优惠券(0)</div>
+   </div>
+    <ul class="clearfix ul-yhj-tab">
+        <li class="tab-con tab-con1">
+          <div class="wrap">
+              <img src="img/yhj.png" alt=""/>
+              <p class="wrap-p">
+                  <strong>很遗憾</strong>
+                  你暂无可以 使用的优惠券
+              </p>
+          </div>
+        </li>
+        <li class="tab-con tab-con2">
+            <span><img src="img/page.jpg" alt=""/></span>
+            <span><img src="img/page.jpg" alt=""/></span>
+            <span><img src="img/page.jpg" alt=""/></span>
+            <span><img src="img/page.jpg" alt=""/></span>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
+<script src="js/zepto.js"></script>
+<script>
+   $(".yhj-tab .tab").click(function () {
+       var z_index=$(this).index();
+       $(this).addClass("active").siblings().removeClass("active");
+       $('.ul-yhj-tab li').eq(z_index).show().siblings().hide();
+   });
+</script>

@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+*,::before,::after{
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color:transparent;  /*去除移动端鼠标点击高亮显示效果b  透明*/
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    -wekit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    font-family:Arial,Helvetica,STHeiTi,sans-serif
+}
+a,button,textarea,select,input{-webkit-appearance: none;-webkit-tap-highlight-color:rgba(255,0,0,0); }
+/*css去掉iPhone、iPad的默认按钮样式  1.去除android a/button/input标签被点击时产生的边框 2.去除ios a标签被点击时产生的半透明灰色背景 */
+html,body { width:100%; }
+body{
+    background: #f5f5f5;
+    font-size: 0.35rem;
+    font-family:Arial,Helvetica,STHeiTi,sans-serif;
+    color: #333;
+}
+img{border:none;vertical-align: top;}
+a{color: #333;text-decoration: none;}
+a:hover{text-decoration: none;}
+a:active,a:hover {  outline: 0;}
+input{outline: none;}
+/*解决firefox按钮文字难以垂直居中问题*/
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner{
+    border:none;padding:0;
+}
+table{border-collapse:collapse;border-spacing:0}
+
+/*工具类*/
+.f_left{float: left;}
+.f_right{float: right;}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    font-size: 0;
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    *zoom: 1;
+}
+i,em{font-style: normal;}
+ol,ul,li,section {
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after:0;
+}
+.ml_10{margin-left: 0.25rem;}
+.mr_10{margin-right: 0.25rem;}
+.mt_10{margin-left: 0.25rem;}
+.mb_10{margin-right: 0.25rem;}
+.pl_10{padding-left: 0.25rem;}
+.pr_10{padding-right: 0.25rem;}
+.pt_10{padding-left: 0.25rem;}
+.pb_10{padding-right: 0.25rem;}
+
+
+/*文字*/
+.icon-angle-right:before {
+    content: "";
+}
+
+/*固定栏*/
+.fixed_bar{width: 100%;height: 2.1rem;background-color: #f7f7fa;position: fixed;bottom: 0px;left: 0px;border-top: 0.025rem solid #d2d2d2;}
+.fixed_bar ul li{float: left;width: 33.3333%;text-align: center;padding-top: 0.2rem;font-size: 0.45rem;color: #7f8389;}
+.fixed_bar ul li a{display: block;position: relative;}
+.fixed_bar ul li img{width: 1.125rem;height: 1.125rem;}
+.fixed_bar ul li i{border-radius: 50%;background-color: red;position: absolute;left:60%;top:0.175rem;color: #fff;font-size:0.225rem;padding: 0px 0.1rem;}
+.fixed_bar ul li p.onss{color: #72d2b6;}
+
+
+

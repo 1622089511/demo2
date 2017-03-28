@@ -1,0 +1,666 @@
+@charset "utf-8";
+.shop{
+    min-width: 300px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+.topWrap{
+    width: 100%;
+    height:44px;
+    background: #d70036;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    line-height: 44px;
+    color: #fff;
+}
+.topWrap .leftbox{
+    display: block;
+    width: 14px;
+    height: 24px;
+    background: url(../img/left.png) no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-size: 12px 24px;
+}
+.shop .search{
+    position: relative;
+    height:54px;
+    padding: 0 30px 0 57px;
+    background:#fff;
+    padding-top: 9px;
+}
+.shop .category{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 32px;
+    height: 48px;
+    background: url("../img/spirits.png") no-repeat;
+    background-size: 250px;
+    background-position: -103px 13px;
+    margin-left: 15px;
+}
+.shop .search-form{
+    position: relative;
+    overflow: hidden;
+    height: 36px;
+    border: 1px solid #b5b5b5;
+    border-radius: 5px;
+}
+.shop .form-input{
+    width: 100%;
+    height: 34px;
+    line-height:18px;
+    font-size: 13px;
+    color: #999;
+    border: 0;
+    background: #e8e8ed;
+    padding: 8px 4px;
+}
+.shop .form-submit{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 36px;
+    border: 0;
+    width: 52px;
+    font-size: 13px;
+    color: #999;
+    background: #e8e8ed url("../img/icon-search.png") no-repeat left center;
+    background-size: 18px;
+    padding-left: 13px;
+}
+.shop .shop-header{
+    background: #fff;
+}
+.shop .shop-header .header-img{
+    width: 100%;
+    vertical-align: top;
+}
+.shop .header-logobar{
+    height: 80px;
+    position: relative;
+}
+.shop .headerwarp{
+    position: absolute;
+    top: -14px;
+    left: 12px;
+}
+.shop .headerwarp img{
+    width: 140px;
+}
+.shop .headerwarp .shop-name{
+    line-height: 32px;
+    color: #666666;
+    font-size: 15px;
+}
+.shop .shoucang {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 70px;
+    height: 48px;
+    text-align: center;
+    padding: 3px 0;
+    border-left: 1px solid #e8e8ed;
+}
+.shop  .shoucang span {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 22px;
+    height: 22px;
+    background: url("../img/spirits.png") no-repeat 0 -55px;
+    background-size: 265px 265px;
+}
+.shop  .shoucang p {
+    line-height: 25px;
+    font-size: 12px;
+    color: #666;
+}
+
+.shop .shopBar{
+    background: #fff;
+    height:60px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-top: 1px solid #e8e8ed;
+    border-bottom: 8px solid #e8e8ed;
+}
+.shop .shopBar span{
+    float: left;
+    width: 25%;
+    height:40px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 12px;
+    color: #666666;
+    border-right: 1px solid #e8e8ed;
+}
+.shop .shopBar span:last-child{
+    border-right: 0;
+}
+.shop .shopBar span i{
+    display:block;
+    width: 20px;
+    height: 20px;
+    background: red;
+    margin-left: auto;
+    margin-right: auto;
+    background: url("../img/spirits.png") no-repeat;
+    background-size: 226px;
+}
+.shop .shopBar span em{
+    display: block;
+    height: 20px;
+    line-height: 20px;
+}
+.shop .shopBar span i.item1{
+    background-position: -122px 0;
+}
+.shop .shopBar span i.item2{
+    background-position: -142px 1px;
+}
+.shop .shopBar span i.item3{
+    background-position: -162px 0;
+}
+.shop .shopBar span i.item4{
+    background-position: -184px 5px;
+}
+
+.shop-home-list{
+    background:#fff;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.shop-home-item1 a{
+    padding-top: 10px;
+    display: block;
+}
+.shop-home-item1 img{
+    width: 100%;
+}
+.goods-list{
+    padding:12px 3px 55px ;
+}
+.goods-list li{
+    width: 50%;
+    float: left;
+}
+.goods-list li .imgs{
+    padding-top: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.goods-list li .pos-img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.goods-list li:nth-child(2n+1){
+    padding-right:5px;
+}
+.goods-list li:nth-child(2n){
+    padding-left: 5px;
+}
+.goods-list li .pos-img img{
+    width: 100%;
+}
+.goods-list li .info {
+    height: 74px;
+    padding: 4px 6px;
+    box-sizing: border-box;
+}
+.goods-list li .info p{
+    height: 42px;
+    font-size: 12px;
+    line-height: 20px;
+    color:#666666;
+    overflow: hidden;
+}
+.goods-list li .info .price-ico{
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #d70036;
+}
+.shop-footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background: #fff;
+    border-top: 1px solid #e8e8ed;
+    border-bottom:  1px solid #e8e8ed;
+}
+.shop-footer a{
+    float: left;
+    width: 33.333%;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    border-right: 1px solid #e8e8ed;
+    font-size: 13px;
+    color: #666666;
+}
+.shop-footer a.last-item{
+    border-right: 0;
+}
+.shop-footer a.last-item i{
+    display: inline-block;
+    width: 18px;
+    height: 14px;
+    vertical-align: middle;
+    background:url("../img/spirits.png")no-repeat;
+    background-size: 276px;
+    background-position: -252px 1px;
+}
+/*隐藏域-分类页*/
+.mui-cover{
+    background-color: #fff;
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+    -webkit-transition: -webkit-transform .2s cubic-bezier(0,0,.25,1);
+    transition: transform .2s cubic-bezier(0,0,.25,1);
+    display: none;
+}
+.mui-cover.show{
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    display: block;
+}
+.shop-all-item-nav {
+    background-color: #fff;
+    border-bottom: 1px solid #e8e8ed;
+    /*padding: 9px 0;*/
+}
+.shop-all-item-nav .attr,
+.shop-cat-first-nav .attr{
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    display: block;
+    width: 10px;
+    height: 17px;
+    background:url("../img/spirits.png") no-repeat;
+    background-position:-40px -56px;
+}
+.shop-cat-first-nav{
+    height: 44px;
+    line-height: 44px;
+    color: #666;
+    font-size: 14px;
+    position: relative;
+    padding: 0 10px;
+}
+.shop-cat-first-nav a{
+    display: block;
+}
+.shop-cat-sub-nav a{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding:0px 17px;
+    margin: 3px 5px;
+    font-size: 13px;
+    color: #666;
+    background: #e8e8ed;
+    border-radius: 5px;
+}
+
+/*搜索列表*/
+.dd-center{
+    padding-bottom: 54px;
+}
+.tabgroups,.dd-roups{
+    border-top:8px solid #e8e8ed;
+    border-bottom:  1px solid #e8e8ed;
+    background: #fff;
+}
+.tabgroups span{
+    float: left;
+    width: 25%;
+    text-align: center;
+    height:42px;
+    line-height:42px;
+    font-size: 14px;
+    color: #666;
+    padding: 7px 0px;
+}
+.dd-roups span{
+    float: left;
+    width: 33.333%;
+    text-align: center;
+    height:42px;
+    line-height:42px;
+    font-size: 14px;
+    color: #666;
+    padding: 7px 0px;
+}
+.tabgroups span a,.dd-roups span a{
+    display: block;
+    width: 100%;
+    border-right: 1px solid #e8e8ed;
+    height:28px;
+    line-height:28px;
+}
+.tabgroups span:last-child a,
+.dd-roups span:last-child a{
+    border-right: 0;
+}
+.tabgroups span.active,
+.dd-roups span.active{
+    border-bottom:#d70036 solid 1px;
+}
+.ul-searchlist-group{
+    padding: 0 12px;
+    background: #fff;
+}
+.ul-searchlist-group .item{
+    display: none;
+}
+.ul-searchlist-group .item.active{
+    display: block;
+}
+/*订单中心*/
+.dd-goods-list{
+    display: none;
+}
+.dd-goods-list .goods{
+    border-top: 8px #e8e8ed solid;
+    background: #fff;
+}
+.dd-goods-list .dd-top{
+    height: 38px;
+    line-height: 38px;
+    padding: 0 12px;
+    border-bottom: 1px #e8e8ed solid;
+}
+.dd-goods-list .dd-top .shop-name{
+    float: left;
+    padding-left: 24px;
+    font-size: 14px;
+    color: #666;
+    background: url("../img/spirits.png") no-repeat;
+    background-position: -280px -22px;
+    background-size: 300px;
+}
+.dd-goods-list .dd-top .delete{
+    float: right;
+    font-size: 14px;
+    color: #666;
+}
+.dd-goods-list .dd-bot{
+    display: block;
+    position: relative;
+    height: 90px;
+}
+.dd-goods-list .dd-bot .goods-img{
+    position: absolute;
+    top:8px;
+    left: 12px;
+    background: red;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+}
+.dd-goods-list .dd-bot .goods-img img{
+    width: 100%;
+}
+.dd-goods-list .dd-bot .goods-deta{
+    padding-left: 98px;
+    padding-right: 58px;
+}
+.dd-goods-list .dd-bot .goods-deta p{
+    font-size: 15px;
+    color: #333;
+    padding-top: 14px;
+    line-height: 20px;
+    height: 54px;
+    overflow: hidden;
+}
+.dd-goods-list .dd-bot .goods-deta .num{
+    font-size: 13px;
+    color: #666;
+    display: block;
+    line-height: 30px;
+}
+.dd-goods-list .dd-bot .zhunagtai{
+    position: absolute;
+    right: 12px;
+    top: 0px;
+    text-align: right;
+    width: 52px;
+    line-height: 95px;
+    font-size: 13px;
+    color: #d70036;
+}
+.goods-price-back{
+    padding-right: 12px;
+    padding-left: 12px;
+    height: 40px;
+    line-height: 40px;
+}
+.goods-price-back span{
+    font-size: 14px;
+    color: #666;
+}
+
+.goods-price-back input{
+    width: 74px;
+    height: 28px;
+    font-size: 13px;
+    color:#d70036;
+    font-weight: bold;
+    float: right;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid #d70036;
+}
+/*我的收藏*/
+.Collection{
+    padding-bottom:48px;
+}
+.Collection-bar{
+    height: 40px;
+    line-height: 40px;
+    padding:0 12px;
+    font-size: 14px;
+    color: #d70036;
+}
+.col-goods-list .goods{
+    background: #fff;
+    margin-bottom: 8px;
+    position: relative;
+    height:120px;
+}
+.col-goods-list .col-bot{
+    line-height: 38px;
+    padding: 0 12px;
+    display: block;
+    position: relative;
+    height: 100px;
+}
+.col-goods-list .col-bot .goods-img{
+    position: absolute;
+    top:11px;
+    left: 12px;
+    background: red;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+}
+.col-goods-list .col-bot .goods-img img{
+    width: 100%;
+}
+.col-goods-list .col-bot .goods-deta{
+    padding-left: 80px;
+}
+.col-goods-list .col-bot .goods-deta p{
+    font-size: 15px;
+    color: #333;
+    padding-top: 10px;
+    line-height: 20px;
+    height: 50px;
+    overflow: hidden;
+}
+.col-goods-list .col-bot .goods-deta .num{
+    font-size: 14px;
+    color:#d70036;
+    display: block;
+    line-height:25px;
+}
+.col-goods-list .zp{
+    height: 25px;
+    line-height: 25px;
+}
+.col-goods-list .zp span{
+    color: #ff9600;
+    font-size: 12px;
+    border: 1px solid #ff9600;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+.col-goods-list .zp i{
+    font-size: 12px;
+    color: #666;
+    padding-left:6px;
+}
+.col-price-back{
+    position: absolute;
+    right: 12px;
+    bottom:8px;
+}
+.col-price-back input{
+    width: 74px;
+    height: 28px;
+    font-size: 13px;
+    color: #d70036;
+    font-weight: bold;
+    float: left;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid #d70036;
+}
+.col-price-back .cart{
+    width:34px;
+    height: 28px;
+    border: 1px solid #d70036;
+    border-radius: 5px;
+    margin-left: 5px;
+    float: left;
+    background: url("../img/icon16-1.png") no-repeat center center;
+    background-size: 20px 19px;
+}
+/*店铺详情*/
+.sp-detail .sp-title{
+    height: 60px;
+    position: relative;
+    background: #fff;
+    margin-bottom: 8px;
+}
+.sp-detail .sp-logo{
+    position: absolute;
+    left: 12px;
+    top: 0px;
+    padding: 12px 0;
+}
+.sp-detail .sp-logo img{
+    width: 100px;
+}
+.sp-detail .sp-name{
+    padding-left: 118px;
+    padding-top: 33px;
+    font-size: 13px;
+    color: #666;
+}
+.sp-detail .sp-sc{
+    position: absolute;
+    top: 0px;
+    right: 12px;
+    height: 60px;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #666;
+}
+.sp-detail .sp-sc span{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 22px;
+    height: 22px;
+    background: url(../img/spirits.png) no-repeat 0 -55px;
+    background-size: 265px 265px;
+}
+.huiyuan{
+    display: block;
+    height: 55px;
+    line-height: 55px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 8px;
+    background: #fff;
+    font-size: 14px;
+    color: #666;
+}
+.huiyuan span.attr{
+    float: right;
+    width: 10px;
+    height: 17px;
+    margin-top: 18px;
+    background: url(../img/spirits.png) no-repeat;
+    background-position: -40px -56px;
+}
+.huiyuan span.ling{
+    display: block;
+    background: url(../img/spirits.png) no-repeat;
+    background-size: 198px;
+    background-position: -19px 0px;
+    width: 23px;
+    height: 21px;
+    display: block;
+    background-color: #fff;
+    float: right;
+    margin-top: 17px;
+}
+.sp-code-box{
+    padding: 20px 0;
+    background: #fff;
+}
+.sp-code-box .fonts{
+    font-size: 16px;
+    color: #666;
+    line-height:25px;
+    text-align: center;
+}
+.sp-code-box .bottombox span{
+    float: left;
+    width: 50%;
+}
+.sp-code-box .bottombox .span1 {
+    padding: 30px 10px 10px 30px;
+}
+.sp-code-box .bottombox .span2 {
+    padding: 30px 30px 10px 10px;
+}
+.sp-code-box .bottombox span img {
+    width: 100%;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>我的收藏</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/shop.css"/>
+</head>
+<body style="background:#e6e6e6;">
+<div class="Collection">
+    <div class="topWrap">
+        <span class="leftbox" onclick="history.go(-1);"></span>
+        我的收藏
+    </div>
+    <div class="Collection-bar">收藏的商品</div>
+
+    <div class="col-goods-list">
+        <div class="goods">
+            <a href="javascript:void(0);" class="col-bot">
+                <div class="goods-img">
+                    <img src="img/goods01.png" alt=""/>
+                </div>
+                <div class="goods-deta">
+                    <p>慕资包包2016新款女包韩版斜跨时尚单间包...</p>
+                    <span class="num">￥691.00</span>
+                    <div class="zp"><span>赠品</span><i>赠10积分</i></div>
+                </div>
+            </a>
+            <div class="col-price-back clearfix">
+                <input class="cancelbtn" type="button" value="取消关注">
+                <a class="cart" href="javascript:void(0);"></a>
+            </div>
+        </div>
+        <div class="goods">
+            <a href="javascript:void(0);" class="col-bot">
+                <div class="goods-img">
+                    <img src="img/goods01.png" alt=""/>
+                </div>
+                <div class="goods-deta">
+                    <p>慕资包包2016新款女包韩版斜跨时尚单间包...</p>
+                    <span class="num">￥692.00</span>
+                    <div class="zp"><span>赠品</span><i>赠10积分</i></div>
+                </div>
+            </a>
+            <div class="col-price-back clearfix">
+                <input class="cancelbtn" type="button" value="取消关注">
+                <a class="cart" href="javascript:void(0);"></a>
+            </div>
+        </div>
+        <div class="goods">
+            <a href="javascript:void(0);" class="col-bot">
+                <div class="goods-img">
+                    <img src="img/goods01.png" alt=""/>
+                </div>
+                <div class="goods-deta">
+                    <p>慕资包包2016新款女包韩版斜跨时尚单间包...</p>
+                    <span class="num">￥693.00</span>
+                    <div class="zp"><span>赠品</span><i>赠10积分</i></div>
+                </div>
+            </a>
+            <div class="col-price-back clearfix">
+                <input class="cancelbtn" type="button" value="取消关注">
+                <a class="cart" href="javascript:void(0);"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--底部菜单-->
+<div class="footerbox">
+    <ul class="clearfix">
+        <li class="active">
+            <a href="index.html">
+                <span class="shouye"></span>
+
+                <div class="font">首页</div>
+            </a>
+        </li>
+        <li>
+            <a href="fenlei.html">
+                <span class="fenleibar"></span>
+
+                <div class="font">分类</div>
+            </a>
+        </li>
+        <li>
+            <a href="cart.html">
+                <span class="gouwuche"></span>
+
+                <div class="font">购物车</div>
+            </a>
+        </li>
+        <li>
+            <a href="user.html">
+                <span class="gerenzhongxin"></span>
+
+                <div class="font">个人中心</div>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
+
+<script>
+    var cancelbtn=document.getElementsByClassName("cancelbtn");
+    for(var i=0;i<cancelbtn.length;i++){
+        cancelbtn[i].onclick= function () {
+            var _thisBox=this.parentNode.nextSibling.parentNode;
+            _thisBox.remove(i);
+        }
+    }
+</script>

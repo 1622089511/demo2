@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="author" content=" ">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <!-- 添加到主屏幕“后，全屏显示-->
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes"/>
+
+    <title>西港商城-地址管理</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body style="background:#eee;">
+<div id="order_wrap">
+    <div class="topWrap">
+        <span class="leftbox" onclick="history.go(-1);"></span>
+        收货地址管理
+    </div>
+    <section class="addr_sec_wrap">
+    <div class="addr_info">
+        <div class="addr_name">白杨<i>135****6304</i></div>
+        <address>陕西西安雁塔区科技二路西安软件园西区普声大厦6层</address>
+    </div>
+    <div class="addr_caozuo">
+        <span class="moren active"><i></i>设为默认</span>
+        <div class="rightbox clearfix">
+            <span class="update"><i onClick="window.open('addr_xiugai.html','_self');"></i>编辑</span>
+            <span class="delete"><i></i>删除</span>
+        </div>
+    </div>
+</section>
+
+    <section class="addr_sec_wrap">
+        <div class="addr_info">
+            <div class="addr_name">白杨<i>135****6304</i></div>
+            <address>陕西西安雁塔区科技二路西安软件园西区普声大厦6层</address>
+        </div>
+        <div class="addr_caozuo">
+            <span class="moren"><i></i>设为默认</span>
+            <div class="rightbox clearfix">
+                <span class="update"><i onClick="window.open('addr_xiugai.html','_self');"></i>编辑</span>
+                <span class="delete"><i></i>删除</span>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="addr_sec_wrap">
+        <div class="addr_info">
+            <div class="addr_name">白杨<i>135****6304</i></div>
+            <address>陕西西安雁塔区科技二路西安软件园西区普声大厦6层</address>
+        </div>
+        <div class="addr_caozuo">
+            <span class="moren"><i></i>设为默认</span>
+            <div class="rightbox clearfix">
+                <span class="update"><i onClick="window.open('addr_xiugai.html','_self');"></i>编辑</span>
+                <span class="delete"><i></i>删除</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="addr_sec_wrap">
+        <div class="addr_info">
+            <div class="addr_name">白杨<i>135****6304</i></div>
+            <address>陕西西安雁塔区科技二路西安软件园西区普声大厦6层</address>
+        </div>
+        <div class="addr_caozuo">
+            <span class="moren"><i></i>设为默认</span>
+            <div class="rightbox clearfix">
+                <span class="update"><i onClick="window.open('addr_xiugai.html','_self');"></i>编辑</span>
+                <span class="delete"><i></i>删除</span>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="addr_btn addr_add">
+    <input id="submitBtn" onclick="window.open('addr_xiugai.html','_self');" type="submit" class="submit" value="+新建地址">
+</div>
+
+<script src="js/zepto.js"></script>
+<script>
+    // 优惠券选择
+    $(".addr_sec_wrap .addr_caozuo .moren").on("click", function (e) {
+        e.preventDefault();
+        if(!$(this).hasClass("active")){
+            $(this).addClass("active").parents(".addr_sec_wrap").siblings().find(".moren").removeClass("active");
+        }else{
+//            $(this).removeClass("active");
+        }
+    });
+</script>
+
+</body>
+</html>
