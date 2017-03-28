@@ -1,11 +1,8 @@
-﻿html {
+html {
   width: 100%;
-  height: 100%;
-  overflow: hidden;
 }
 body {
   width: 100%;
-  height: 100%;
   overflow: auto;
   font-size: 0.3125rem;
   font-family: Arial, Helvetica, STHeiTi, sans-serif;
@@ -56,6 +53,8 @@ img {
   height: 1.15625rem;
   background-color: #fabc09;
   position: fixed;
+  z-index:200;
+  top:0;
 }
 .header-box .header-classify {
   float: left;
@@ -727,4 +726,3 @@ img {
   background-color: #5b6167 ;
   border-radius: 50%;
 }
-.search-input{font-size:.4rem;}

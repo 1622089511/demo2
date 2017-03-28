@@ -1,20 +1,38 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<title>苏宁demo</title>
 		<script type="text/javascript">
-			//set meta ppi
+		
 			var pixelRatio = 1 / window.devicePixelRatio;
 			document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale='+pixelRatio+',maximum-scale='+pixelRatio+', minimum-scale='+pixelRatio+'"/>')
 			//set root fontSize
 			var html = document.getElementsByTagName('html')[0];
 			var hw = html.getBoundingClientRect().width;
-			html.style.fontSize = hw/10 + 'px';
-		</script>
-		<link rel="stylesheet" type="text/css" href="normalize.css"/>
+			html.style.fontSize = hw/10 + 'px';	
+				
+		</script>	
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 		<link rel="stylesheet" type="text/css" href="index.css"/>
-		<title>苏宁demo</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var swiper = new Swiper('#slide', {
+					autoplay: 2300,
+					visibilityFullFit: true,
+					loop: true,
+					speed: 500,
+					autoplayDisableOninteraction: false,
+					autoplayStopOnLast: true,
+					pagination: '.pagination'
+				});
+			});
+		</script>
+		
 	</head>
 	<body>
 		<!--header menu-->
@@ -30,25 +48,27 @@
 			<div class="shop-car">
 			</div>
 		</header>
-		<!--轮播图 & nav区 & 头条-->
+		<!--轮播图 -->
 		<section class="main" id="search">
-			<div class="carousel">
-				<ul class="carousel-list clearfix">
-					<li class="carousel-item"><a href="#"><img src=""/></a></li>
-					
-				</ul>
-				<div class="trigger">
-					<ul>
-						<li class="trigger-btn active"></li>
-						<li class="trigger-btn"></li>
-						<li class="trigger-btn"></li>
-						<li class="trigger-btn"></li>
-						<li class="trigger-btn"></li>
-						<li class="trigger-btn"></li>
-						<li class="trigger-btn"></li>
-						<li class="trigger-btn"></li>
-					</ul>	
+			<div id="slide">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/1.png" />
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/1.png" />
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/1.png" />
+						</a>
+					</div>
 				</div>
+				<div class="pagination"></div>
 			</div>
 			<!--导航区-->
 			<nav class="nav clearfix">
@@ -324,11 +344,6 @@
 					
 				</li>
 			</ul>		
-			<ul class="favor-trigger">
-				<li class="trigger-btn active"></li>
-				<li class="trigger-btn"></li>
-				<li class="trigger-btn"></li>
-			</ul>
 		</div>
 		<!--猜你喜欢-->
 		<div class="guesslike">
@@ -407,11 +422,22 @@
 			</div>
 		</footer>
 		<!--返回按钮-->
-		<div class="gotop"></div>
+		<div class="gotop" onclick="$(window).scrollTop(0)"></div>
 	<script type="text/javascript">
+		$(document).ready(function (){
+			
+			$('.del').on('click',function (e){
+				e.preventDefault();
+			    $('.download').hide();
+			})
+				
+		});
+			
+			
+			
+			
 		
-		var html = document.getElementsByTagName('html')[0];
-		var width = html.getBoundingClientRect().width;
+		
 		
 		
 	</script>	
